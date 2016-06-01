@@ -1,0 +1,15 @@
+﻿<Window x:Class="Shannan.DoingWell.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <StackPanel>
+            <CheckBox Content="男" IsChecked="True"/>
+            <CheckBox Content="女"/>
+            <CheckBox Content="双性" IsEnabled="False"/>
+            <Calendar/>
+            <CalendarItem/>
+
+        </StackPanel>
+    </Grid>
+</Window>
