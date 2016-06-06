@@ -4,8 +4,83 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
-            
+             d:DesignHeight="30" d:DesignWidth="1300" Background="#fff">
+    <UserControl.Resources>
+        <Style TargetType="{x:Type TextBlock}">
+            <Setter Property="FontSize" Value="12"></Setter>
+            <Setter Property="Foreground" Value="#333"></Setter>
+        </Style>
+
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="BorderBrush" Value="{Binding BorderBrush,FallbackValue='#ddd'}"></Setter>
+            <Setter Property="Background" Value="{Binding Background,FallbackValue='#fff'}"></Setter>
+            <Setter Property="Padding" Value="{Binding Padding,FallbackValue='10,0'}"></Setter>
+            <Setter Property="Height" Value="{Binding Height,FallbackValue=26}"></Setter>
+            <Setter Property="FontSize" Value="{Binding FontSize,FallbackValue=12}"></Setter>
+            <Setter Property="Foreground" Value="{Binding Foreground,FallbackValue='#333'}"></Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="3" SnapsToDevicePixels="True">
+                            <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="True">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" TargetName="border" Value="#FFBEE6FD"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#FF3C7FB1"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" TargetName="border" Value="#FFC4E5F6"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#FF2C628B"/>
+                            </Trigger>
+                            <Trigger Property="ToggleButton.IsChecked" Value="True">
+                                <Setter Property="Background" TargetName="border" Value="#FFBCDDEE"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#FF245A83"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Background" TargetName="border" Value="#FFF4F4F4"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#FFADB2B5"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="#FF838383"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </UserControl.Resources>
+    <Grid x:Name="PART_Root">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button x:Name="PART_FirstButton" Grid.Column="1" IsEnabled="False" Content="首页" Margin="3,0"/>
+        <Button x:Name="PART_PreviousButton" Grid.Column="2" Content="上一页" Margin="3,0"/>
+
+        <WrapPanel x:Name="pagers">
+
+        </WrapPanel>
+        <Button x:Name="PART_NextButton" Grid.Column="4" Content="下一页" Margin="3,0"/>
+        <Button x:Name="PART_LastButton" Grid.Column="5" Content="末页" Margin="3,0"/>
+
+        <WrapPanel Grid.Column="6" VerticalAlignment="Center">
+            <TextBlock Margin="10,0,0,0">共</TextBlock>
+            <TextBlock x:Name="PART_PageCount" Foreground="#ff7200" Margin="2,0">0</TextBlock>
+            <TextBlock>页</TextBlock>
+            <TextBlock Margin="5,0">/</TextBlock>
+            <TextBlock x:Name="PART_Total" Foreground="#ff7200" Margin="2,0">0</TextBlock>
+            <TextBlock>条</TextBlock>
+        </WrapPanel>
+
     </Grid>
 </UserControl>
