@@ -192,6 +192,14 @@ namespace Shannan.DoingWell.UserControls
                 {
                     this.Visibility = Visibility.Collapsed;
                 }
+                else
+                {
+                    this.Visibility = Visibility.Visible;
+                }
+            }
+            else
+            {
+                this.Visibility = Visibility.Visible;
             }
         }
 
