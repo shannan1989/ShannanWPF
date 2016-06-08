@@ -46,7 +46,6 @@
         </Style>
 
         <Style TargetType="{x:Type Button}" BasedOn="{StaticResource SNButtonNormal}"/>
-
     </UserControl.Resources>
     <Grid x:Name="PART_Root">
         <Grid.ColumnDefinitions>
@@ -60,7 +59,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <Button x:Name="PART_FirstButton" Grid.Column="1" IsEnabled="False" Content="首页" Margin="3,0"/>
+        <Button x:Name="PART_FirstButton" Grid.Column="1" Content="首页" Margin="3,0"/>
         <Button x:Name="PART_PreviousButton" Grid.Column="2" Content="上一页" Margin="3,0"/>
 
         <WrapPanel Grid.Column="3">
