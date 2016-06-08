@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="Framework\System\Windows\Controls\Button.cs" />
     <Compile Include="Framework\System\Windows\Controls\Calendar.cs" />
+    <Compile Include="Framework\System\Windows\Controls\CheckBox.cs" />
     <Compile Include="Framework\System\Windows\Controls\Primitives\ButtonBase.cs" />
     <Compile Include="Framework\System\Windows\Controls\Primitives\CalendarItem.cs" />
     <Compile Include="Framework\System\Windows\Controls\TextBox.cs" />
