@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="30" d:DesignWidth="1300" Background="#fff">
+             d:DesignHeight="30" d:DesignWidth="1300">
     <UserControl.Resources>
         <Style TargetType="{x:Type TextBlock}">
             <Setter Property="FontSize" Value="12"></Setter>
@@ -14,7 +14,8 @@
         <Style x:Key="SNButtonNormal" TargetType="{x:Type Button}">
             <Setter Property="BorderBrush" Value="{Binding BorderBrush,FallbackValue='#ddd'}"></Setter>
             <Setter Property="Background" Value="{Binding Background,FallbackValue='#fff'}"></Setter>
-            <Setter Property="Padding" Value="{Binding Padding,FallbackValue='10,0'}"></Setter>
+            <Setter Property="Padding" Value="{Binding Padding,FallbackValue='5,0'}"></Setter>
+            <Setter Property="MinWidth" Value="{Binding MinWidth,FallbackValue=26}"></Setter>
             <Setter Property="Height" Value="{Binding Height,FallbackValue=26}"></Setter>
             <Setter Property="FontSize" Value="{Binding FontSize,FallbackValue=12}"></Setter>
             <Setter Property="Foreground" Value="{Binding Foreground,FallbackValue='#333'}"></Setter>

@@ -95,6 +95,17 @@ namespace Shannan.DoingWell.UserControls
             DependencyProperty.Register("ShowNumber", typeof(int), typeof(Pager), new PropertyMetadata(0));
         #endregion ShowNumber
 
+        #region IsShowWhenEmpty
+        public bool IsShowWhenEmpty
+        {
+            get { return (bool)GetValue(IsShowWhenEmptyProperty); }
+            set { SetValue(IsShowWhenEmptyProperty, value); }
+        }
+
+        public static readonly DependencyProperty IsShowWhenEmptyProperty =
+            DependencyProperty.Register("IsShowWhenEmpty", typeof(bool), typeof(Pager), new PropertyMetadata(false));
+        #endregion IsShowWhenEmpty
+
         #endregion Public Properties
 
         private void FirstButton_Click(object sender, RoutedEventArgs e)
@@ -177,6 +188,10 @@ namespace Shannan.DoingWell.UserControls
             {
                 PART_FirstButton.IsEnabled = PART_PreviousButton.IsEnabled = false;
                 PART_LastButton.IsEnabled = PART_NextButton.IsEnabled = false;
+                if (IsShowWhenEmpty == false)
+                {
+                    this.Visibility = Visibility.Collapsed;
+                }
             }
         }
 
