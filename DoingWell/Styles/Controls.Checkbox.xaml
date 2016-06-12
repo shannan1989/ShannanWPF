@@ -18,13 +18,7 @@
                             <Image x:Name="CheckIcon" Stretch="Uniform" Width="20" Height="20" Source="/DoingWell;Component/Images/Styles/checkbox_unchecked.png"/>
                         </Grid>
 
-                        <ContentPresenter x:Name="contentPresenter" Grid.Column="1" Focusable="False" RecognizesAccessKey="True"
-                                          ContentTemplate="{TemplateBinding ContentTemplate}"
-                                          Content="{TemplateBinding Content}"
-                                          ContentStringFormat="{TemplateBinding ContentStringFormat}"
-                                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                          SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                        <ContentPresenter x:Name="contentPresenter" Grid.Column="1" Focusable="False" RecognizesAccessKey="True" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
                     </Grid>
 
                     <ControlTemplate.Triggers>
@@ -34,17 +28,15 @@
                         <Trigger Property="IsChecked" Value="{x:Null}">
                             <Setter TargetName="CheckIcon" Property="Source" Value="/DoingWell;Component/Images/Styles/checkbox_unchecked.png"/>
                         </Trigger>
-                        <Trigger Property="IsMouseOver" Value="true">
-                        </Trigger>
-                        <Trigger Property="IsEnabled" Value="False">
-                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true"></Trigger>
+                        <Trigger Property="IsEnabled" Value="False"></Trigger>
                         <Trigger Property="controls:ToggleButtonHelper.ContentDirection" Value="RightToLeft">
-                            <Setter TargetName="LeftCol" Property="Width" Value="*" />
-                            <Setter TargetName="PART_CHECKBOX" Property="Grid.Column" Value="1" />
-                            <Setter TargetName="PART_CHECKBOX" Property="Margin" Value="5,0,0,0" />
-                            <Setter TargetName="RightCol" Property="Width" Value="Auto" />
-                            <Setter TargetName="contentPresenter" Property="Grid.Column" Value="0" />
-                            <Setter TargetName="contentPresenter" Property="HorizontalAlignment" Value="Right" />
+                            <Setter TargetName="LeftCol" Property="Width" Value="*"/>
+                            <Setter TargetName="PART_CHECKBOX" Property="Grid.Column" Value="1"/>
+                            <Setter TargetName="PART_CHECKBOX" Property="Margin" Value="5,0,0,0"/>
+                            <Setter TargetName="RightCol" Property="Width" Value="Auto"/>
+                            <Setter TargetName="contentPresenter" Property="Grid.Column" Value="0"/>
+                            <Setter TargetName="contentPresenter" Property="HorizontalAlignment" Value="Right"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

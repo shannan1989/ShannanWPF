@@ -18,19 +18,10 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TextBox}">
-                    <Border x:Name="border"
-                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" 
-                            BorderBrush="{TemplateBinding BorderBrush}" 
-                            BorderThickness="{TemplateBinding BorderThickness}" 
-                            Background="{TemplateBinding Background}">
+                    <Border x:Name="border" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}">
                         <Grid>
                             <ScrollViewer x:Name="PART_ContentHost" Focusable="False" IsTabStop="False" Margin="2" BorderThickness="0" Background="{x:Null}" VerticalAlignment="Stretch" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
-                            <TextBlock x:Name="PART_Watermark" Visibility="Collapsed" IsHitTestVisible="False" Opacity="0.6" Margin="3,2"
-                                       Padding="{TemplateBinding Padding}"
-                                       HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                       VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                       Foreground="{TemplateBinding Foreground}"
-                                       Text="{TemplateBinding controls:TextBoxHelper.Watermark}"/>
+                            <TextBlock x:Name="PART_Watermark" Visibility="Collapsed" IsHitTestVisible="False" Opacity="0.6" Margin="3,2" Padding="{TemplateBinding Padding}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Foreground="{TemplateBinding Foreground}" Text="{TemplateBinding controls:TextBoxHelper.Watermark}"/>
                         </Grid>
                     </Border>
 
@@ -38,15 +29,12 @@
                         <DataTrigger Binding="{Binding Path=Text,RelativeSource={RelativeSource Self}}" Value="">
                             <Setter TargetName="PART_Watermark" Property="Visibility" Value="Visible"/>
                         </DataTrigger>
-
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="border" Property="BorderBrush" Value="{Binding Path=(controls:ControlsHelper.MouseOverBorderBrush),RelativeSource={RelativeSource TemplatedParent}}"/>
                         </Trigger>
-
                         <Trigger Property="IsFocused" Value="True">
                             <Setter TargetName="border" Property="BorderBrush" Value="{Binding Path=(controls:ControlsHelper.FocusBorderBrush),RelativeSource={RelativeSource TemplatedParent}}"/>
                         </Trigger>
-
                         <Trigger Property="IsEnabled" Value="False">
                             <Setter TargetName="border" Property="Opacity" Value="0.56"/>
                         </Trigger>

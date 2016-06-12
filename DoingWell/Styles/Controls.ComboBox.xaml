@@ -48,7 +48,7 @@
         </Setter>
     </Style>
 
-    <Style TargetType="{x:Type ComboBox}">
+    <Style x:Key="SNComboBox" TargetType="{x:Type ComboBox}">
         <Setter Property="BorderThickness" Value="{Binding BorderThickness,FallbackValue='0,0,0,1'}"/>
         <Setter Property="BorderBrush" Value="{Binding BorderBrush,FallbackValue='#ddd'}"/>
         <Setter Property="controls:ControlsHelper.FocusBorderBrush" Value="{Binding controls:ControlsHelper.FocusBorderBrush,FallbackValue='#da3610'}"/>
@@ -108,5 +108,7 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+    <Style TargetType="{x:Type ComboBox}" BasedOn="{StaticResource SNComboBox}"/>
 
 </ResourceDictionary>
