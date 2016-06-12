@@ -31,5 +31,18 @@ namespace Shannan.DoingWell.Controls
         public static readonly DependencyProperty MouseOverBorderBrushProperty =
             DependencyProperty.RegisterAttached("MouseOverBorderBrush", typeof(Brush), typeof(ControlsHelper), new FrameworkPropertyMetadata(Brushes.Transparent, FrameworkPropertyMetadataOptions.AffectsRender | FrameworkPropertyMetadataOptions.Inherits));
 
+        public static CornerRadius GetCornerRadius(DependencyObject obj)
+        {
+            return (CornerRadius)obj.GetValue(CornerRadiusProperty);
+        }
+
+        public static void SetCornerRadius(DependencyObject obj, CornerRadius value)
+        {
+            obj.SetValue(CornerRadiusProperty, value);
+        }
+
+        public static readonly DependencyProperty CornerRadiusProperty =
+            DependencyProperty.RegisterAttached("CornerRadius", typeof(CornerRadius), typeof(ControlsHelper), new FrameworkPropertyMetadata(new CornerRadius(), FrameworkPropertyMetadataOptions.AffectsMeasure | FrameworkPropertyMetadataOptions.AffectsRender));
+
     }
 }
