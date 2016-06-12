@@ -12,8 +12,8 @@
         <Setter Property="Background" Value="{Binding Foreground,FallbackValue='Transparent'}"/>
         <Setter Property="BorderBrush" Value="{Binding BorderBrush,FallbackValue='#ddd'}"/>
         <Setter Property="BorderThickness" Value="{Binding BorderThickness,FallbackValue='0,0,0,1'}"/>
-        <Setter Property="controls:TextBoxHelper.FocusBorderBrush" Value="{Binding controls:TextBoxHelper.FocusBorderBrush,FallbackValue='#da3610'}"/>
-        <Setter Property="controls:TextBoxHelper.MouseOverBorderBrush" Value="{Binding controls:TextBoxHelper.MouseOverBorderBrush,FallbackValue='#da3610'}"/>
+        <Setter Property="controls:ControlsHelper.FocusBorderBrush" Value="{Binding controls:ControlsHelper.FocusBorderBrush,FallbackValue='#da3610'}"/>
+        <Setter Property="controls:ControlsHelper.MouseOverBorderBrush" Value="{Binding controls:ControlsHelper.MouseOverBorderBrush,FallbackValue='#da3610'}"/>
         <Setter Property="SnapsToDevicePixels" Value="True"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -40,11 +40,11 @@
                         </DataTrigger>
 
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="border" Property="BorderBrush" Value="{Binding Path=(controls:TextBoxHelper.MouseOverBorderBrush),RelativeSource={RelativeSource TemplatedParent}}"/>
+                            <Setter TargetName="border" Property="BorderBrush" Value="{Binding Path=(controls:ControlsHelper.MouseOverBorderBrush),RelativeSource={RelativeSource TemplatedParent}}"/>
                         </Trigger>
 
                         <Trigger Property="IsFocused" Value="True">
-                            <Setter TargetName="border" Property="BorderBrush" Value="{Binding Path=(controls:TextBoxHelper.FocusBorderBrush),RelativeSource={RelativeSource TemplatedParent}}"/>
+                            <Setter TargetName="border" Property="BorderBrush" Value="{Binding Path=(controls:ControlsHelper.FocusBorderBrush),RelativeSource={RelativeSource TemplatedParent}}"/>
                         </Trigger>
 
                         <Trigger Property="IsEnabled" Value="False">
