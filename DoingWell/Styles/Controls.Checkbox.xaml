@@ -44,6 +44,4 @@
         </Setter>
     </Style>
 
-    <Style TargetType="{x:Type CheckBox}" BasedOn="{StaticResource SNCheckBox}"/>
-
 </ResourceDictionary>

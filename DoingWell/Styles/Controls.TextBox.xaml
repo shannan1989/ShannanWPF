@@ -44,6 +44,4 @@
         </Setter>
     </Style>
 
-    <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource SNTextBox}"/>
-
 </ResourceDictionary>

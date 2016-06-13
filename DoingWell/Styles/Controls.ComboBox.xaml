@@ -109,6 +109,4 @@
         </Setter>
     </Style>
 
-    <Style TargetType="{x:Type ComboBox}" BasedOn="{StaticResource SNComboBox}"/>
-
 </ResourceDictionary>
