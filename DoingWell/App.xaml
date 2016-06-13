@@ -5,9 +5,7 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="pack://application:,,,/Styles/Controls.TextBox.xaml"/>
-                <ResourceDictionary Source="pack://application:,,,/Styles/Controls.CheckBox.xaml"/>
-                <ResourceDictionary Source="pack://application:,,,/Styles/Controls.Calendar.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/Styles/Controls.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
