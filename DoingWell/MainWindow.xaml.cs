@@ -20,6 +20,23 @@ namespace Shannan.DoingWell
         public MainWindow()
         {
             InitializeComponent();
+
+            this.Loaded += MainWindow_Loaded;
+        }
+
+        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            pager.CurrentPageChanged += Pager_CurrentPageChanged;
+        }
+
+        private void Pager_CurrentPageChanged(object sender, RoutedEventArgs e)
+        {
+            //MessageBox.Show(pager.CurrentPage.ToString());
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            pager.Total = 200;
         }
     }
 }

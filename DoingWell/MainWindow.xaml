@@ -1,15 +1,69 @@
 ﻿<Window x:Class="Shannan.DoingWell.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
+        xmlns:controls="clr-namespace:Shannan.DoingWell.Controls"
+        xmlns:uc="clr-namespace:Shannan.DoingWell.UserControls"
+        Title="MainWindow" Height="1040" Width="1920">
     <Grid>
-        <StackPanel>
-            <CheckBox Content="男" IsChecked="True"/>
-            <CheckBox Content="女"/>
-            <CheckBox Content="双性" IsEnabled="False"/>
+        <StackPanel Margin="10">
+            <WrapPanel HorizontalAlignment="Center" Margin="5">
+                <uc:Pager x:Name="pager" Total="500" ShowNumber="5" PageSize="50"></uc:Pager>
+            </WrapPanel>
+            <WrapPanel Margin="10">
+                <TextBlock Text="上帝"/>
+                <TextBlock Text="" Style="{DynamicResource SNAutoCollapsingTextBlock}"/>
+                <TextBlock Text="上帝" Style="{DynamicResource SNAutoCollapsingTextBlock}"/>
+            </WrapPanel>
+            <WrapPanel Margin="10">
+                <Button Content="页码" Click="Button_Click" controls:ControlsHelper.CornerRadius="5" Background="#da3610" BorderBrush="#000" BorderThickness="1" Foreground="#fff" Padding="5"/>
+            </WrapPanel>
+            <WrapPanel Margin="10">
+                <TextBox Width="200" controls:TextBoxHelper.Watermark="inputing"/>
+            </WrapPanel>
+            <WrapPanel Margin="10">
+                <CheckBox Content="男" IsChecked="True"/>
+                <CheckBox Content="女"/>
+                <CheckBox Content="双性" IsEnabled="False" controls:ToggleButtonHelper.ContentDirection="RightToLeft"/>
+            </WrapPanel>
+            <WrapPanel Margin="10">
+                <RadioButton Content="男" controls:ToggleButtonHelper.ContentDirection="RightToLeft"/>
+                <RadioButton Content="女"/>
+            </WrapPanel>
+            <WrapPanel Margin="10">
+                <RadioButton Style="{DynamicResource SNRadioButton}" Content="男" controls:ToggleButtonHelper.ContentDirection="RightToLeft" IsChecked="True"/>
+                <RadioButton Style="{DynamicResource SNRadioButton}" Content="女"  IsChecked="True"/>
+                <RadioButton Style="{DynamicResource SNRadioButton}" Content="未知" IsEnabled="False" IsChecked="True"/>
+            </WrapPanel>
+            <WrapPanel Margin="10">
+                <ComboBox Text="下拉框">
+                    <ComboBoxItem Content="haha"/>
+                    <ComboBoxItem Content="haha"/>
+                    <ComboBoxItem Content="haha"/>
+                    <ComboBoxItem Content="haha"/>
+                    <ComboBoxItem Content="haha"/>
+                    <ComboBoxItem Content="haha"/>
+                    <ComboBoxItem Content="haha"/>
+                    <ComboBoxItem Content="haha"/>
+                    <ComboBoxItem Content="haha"/>
+                    <ComboBoxItem Content="haha"/>
+                    <ComboBoxItem Content="haha"/>
+                    <ComboBoxItem Content="haha"/>
+                    <ComboBoxItem Content="haha"/>
+                    <ComboBoxItem Content="haha"/>
+                    <ComboBoxItem Content="haha"/>
+                    <ComboBoxItem Content="haha"/>
+                    <ComboBoxItem Content="haha"/>
+                    <ComboBoxItem Content="haha"/>
+                    <ComboBoxItem Content="haha"/>
+                    <ComboBoxItem Content="haha"/>
+                    <ComboBoxItem Content="haha"/>
+                    <ComboBoxItem Content="haha"/>
+                    <ComboBoxItem Content="haha"/>
+                    <ComboBoxItem Content="haha"/>
+                </ComboBox>
+            </WrapPanel>
             <Calendar/>
             <CalendarItem/>
-
         </StackPanel>
     </Grid>
 </Window>
