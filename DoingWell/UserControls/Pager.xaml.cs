@@ -40,6 +40,7 @@ namespace Shannan.DoingWell.UserControls
         private static void TotalChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             (d as Pager).CalPageCount();
+            (d as Pager).RefreshLayout();
         }
         #endregion Total
 
@@ -55,6 +56,7 @@ namespace Shannan.DoingWell.UserControls
         private static void PageSizeChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             (d as Pager).CalPageCount();
+            (d as Pager).RefreshLayout();
         }
         #endregion PageSize
 
@@ -70,7 +72,6 @@ namespace Shannan.DoingWell.UserControls
         private static void PageCountChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             (d as Pager).CurrentPage = 1;
-            (d as Pager).RefreshLayout();
         }
         #endregion PageCount
 
