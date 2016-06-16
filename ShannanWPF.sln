@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoingWell", "DoingWell\DoingWell.csproj", "{55CF2B67-298C-4494-A085-8EB773763118}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Windows Presentation Framework Reference Source", "Windows Presentation Framework Reference Source\Windows Presentation Framework Reference Source.csproj", "{2F724752-D522-4C63-8B3A-602D98B32733}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +17,10 @@ Global
 		{55CF2B67-298C-4494-A085-8EB773763118}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55CF2B67-298C-4494-A085-8EB773763118}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55CF2B67-298C-4494-A085-8EB773763118}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F724752-D522-4C63-8B3A-602D98B32733}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F724752-D522-4C63-8B3A-602D98B32733}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F724752-D522-4C63-8B3A-602D98B32733}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F724752-D522-4C63-8B3A-602D98B32733}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
