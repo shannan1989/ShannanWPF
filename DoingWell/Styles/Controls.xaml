@@ -4,6 +4,7 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="pack://application:,,,/Styles/Controls.TextBlock.xaml"/>
         <ResourceDictionary Source="pack://application:,,,/Styles/Controls.TextBox.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/Styles/Controls.PasswordBox.xaml"/>
         <ResourceDictionary Source="pack://application:,,,/Styles/Controls.ComboBox.xaml"/>
         <ResourceDictionary Source="pack://application:,,,/Styles/Controls.CheckBox.xaml"/>
         <ResourceDictionary Source="pack://application:,,,/Styles/Controls.RadioButton.xaml"/>
