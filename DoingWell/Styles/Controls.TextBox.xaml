@@ -21,7 +21,7 @@
                     <Border x:Name="border" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}">
                         <Grid>
                             <ScrollViewer x:Name="PART_ContentHost" Focusable="False" IsTabStop="False" Margin="2" BorderThickness="0" Background="{x:Null}" VerticalAlignment="Stretch" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
-                            <TextBlock x:Name="PART_Watermark" Visibility="Collapsed" IsHitTestVisible="False" Opacity="0.6" Margin="2" Padding="{TemplateBinding Padding}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Foreground="{TemplateBinding Foreground}" Text="{TemplateBinding controls:TextBoxHelper.Watermark}"/>
+                            <TextBlock x:Name="PART_Watermark" Visibility="Collapsed" IsHitTestVisible="False" Opacity="0.6" Margin="3,2" Padding="{TemplateBinding Padding}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Foreground="{TemplateBinding Foreground}" Text="{TemplateBinding controls:TextBoxHelper.Watermark}"/>
                         </Grid>
                     </Border>
 
