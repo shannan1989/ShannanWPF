@@ -9,6 +9,7 @@
         <ResourceDictionary Source="pack://application:,,,/Styles/Controls.CheckBox.xaml"/>
         <ResourceDictionary Source="pack://application:,,,/Styles/Controls.RadioButton.xaml"/>
         <ResourceDictionary Source="pack://application:,,,/Styles/Controls.Calendar.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/Styles/Controls.DatePicker.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 
     <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource SNTextBox}"/>
@@ -17,5 +18,6 @@
     <Style TargetType="{x:Type CheckBox}" BasedOn="{StaticResource SNCheckBox}"/>
     <Style TargetType="{x:Type RadioButton}" BasedOn="{StaticResource SNRadioButton}"/>
     <Style TargetType="{x:Type Calendar}" BasedOn="{StaticResource SNCalendar}"/>
+    <Style TargetType="{x:Type DatePicker}" BasedOn="{StaticResource SNDatePicker}"/>
 
 </ResourceDictionary>
