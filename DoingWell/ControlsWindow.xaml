@@ -1,0 +1,76 @@
+﻿<local:SNWindow x:Class="Shannan.DoingWell.ControlsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Shannan.DoingWell"
+        xmlns:controls="clr-namespace:Shannan.DoingWell.Controls"
+        xmlns:uc="clr-namespace:Shannan.DoingWell.UserControls"
+        mc:Ignorable="d"
+        Title="用户控件与自定义样式"
+        d:DesignHeight="1080" d:DesignWidth="1920">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" Margin="10">
+            <TextBlock Text="用户控件" TextAlignment="Center" FontWeight="Bold" FontSize="20" Margin="0,0,0,20"/>
+            <Border Padding="5">
+                <uc:Pager x:Name="pager" Total="500" ShowNumber="5" PageSize="50"/>
+            </Border>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Margin="10">
+            <TextBlock Text="自定义样式" TextAlignment="Center" FontWeight="Bold" FontSize="20" Margin="0,0,0,20"/>
+            <WrapPanel Margin="10">
+                <TextBox Width="200" controls:TextBoxHelper.Watermark="input your email"/>
+            </WrapPanel>
+            <WrapPanel Margin="10">
+                <PasswordBox controls:TextBoxHelper.Watermark="input your password" Width="200"/>
+            </WrapPanel>
+            <WrapPanel Margin="10">
+                <PasswordBox Password="123456" controls:TextBoxHelper.Watermark="password" Width="200"/>
+            </WrapPanel>
+            <WrapPanel Margin="10">
+                <CheckBox Content="男" IsChecked="True"/>
+                <CheckBox Content="女"/>
+                <CheckBox Content="双性" IsEnabled="False"/>
+            </WrapPanel>
+            <WrapPanel Margin="10">
+                <CheckBox Content="男" IsChecked="True" controls:ToggleButtonHelper.ContentDirection="RightToLeft"/>
+                <CheckBox Content="女" controls:ToggleButtonHelper.ContentDirection="RightToLeft"/>
+                <CheckBox Content="双性" IsEnabled="False" controls:ToggleButtonHelper.ContentDirection="RightToLeft"/>
+            </WrapPanel>
+            <WrapPanel Margin="10">
+                <RadioButton Content="男" IsChecked="True"/>
+                <RadioButton Content="女"/>
+                <RadioButton Content="变性" IsEnabled="False"/>
+            </WrapPanel>
+            <WrapPanel Margin="10">
+                <RadioButton Content="男"/>
+                <RadioButton Content="女"/>
+                <RadioButton Content="变性" IsEnabled="False" IsChecked="True"/>
+            </WrapPanel>
+            <WrapPanel Margin="10">
+                <RadioButton Content="男" controls:ToggleButtonHelper.ContentDirection="RightToLeft"/>
+                <RadioButton Content="女" controls:ToggleButtonHelper.ContentDirection="RightToLeft"/>
+                <RadioButton Content="变性" IsEnabled="False" IsChecked="True" controls:ToggleButtonHelper.ContentDirection="RightToLeft"/>
+            </WrapPanel>
+            <WrapPanel Margin="10">
+                <DatePicker/>
+            </WrapPanel>
+            <WrapPanel Margin="10">
+                <Calendar/>
+            </WrapPanel>
+            <WrapPanel Margin="10">
+                <ComboBox Text="下拉框">
+                    <ComboBoxItem Content="haha"/>
+                    <ComboBoxItem Content="haha"/>
+                    <ComboBoxItem Content="haha"/>
+                    <ComboBoxItem Content="haha"/>
+                    <ComboBoxItem Content="haha"/>
+                </ComboBox>
+            </WrapPanel>
+        </StackPanel>
+    </Grid>
+</local:SNWindow>
