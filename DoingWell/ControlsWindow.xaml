@@ -19,6 +19,12 @@
             <Border Padding="5">
                 <uc:Pager x:Name="pager" Total="500" ShowNumber="5" PageSize="50"/>
             </Border>
+            <Border Padding="5">
+                <uc:ImageViewer x:Name="imageViewer"/>
+            </Border>
+            <Border Padding="5">
+                <uc:DrawLine/>
+            </Border>
         </StackPanel>
         <StackPanel Grid.Column="1" Margin="10">
             <TextBlock Text="自定义样式" TextAlignment="Center" FontWeight="Bold" FontSize="20" Margin="0,0,0,20"/>
