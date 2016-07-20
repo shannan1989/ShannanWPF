@@ -1,0 +1,51 @@
+﻿<local:SNWindow x:Class="Shannan.DoingWell.DrawingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Shannan.DoingWell"
+        mc:Ignorable="d"
+        Title="画图"
+        d:DesignHeight="1080" d:DesignWidth="1920">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="0" Background="Red"></Border>
+        <Border Grid.Column="1">
+            <Grid>
+                <Image x:Name="initImage" Stretch="Uniform" Width="750"/>
+                <Border x:Name="drawBorder" Width="750">
+                    <InkCanvas x:Name="drawCanvas" Background="Transparent" UseCustomCursor="True" Cursor="Pen">
+                        <InkCanvas.DefaultDrawingAttributes>
+                            <DrawingAttributes Height="2" Width="2" StylusTip="Ellipse" Color="Orange"/>
+                        </InkCanvas.DefaultDrawingAttributes>
+                    </InkCanvas>
+                </Border>
+            </Grid>
+        </Border>
+        <Border Grid.Column="2" Padding="10" Background="Green">
+            <StackPanel >
+                <ListBox x:Name="colorsList" BorderThickness="0" SelectedValuePath="FillColor">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal"/>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Rectangle Height="15" Width="30" Fill="{Binding FillColor}"/>
+                                <TextBlock FontSize="14" Text="{Binding ColorName}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                <RadioButton x:Name="pigaiButton" Margin="0,5" Content="批改"/>
+                <RadioButton x:Name="eraseButton" Margin="0,5" Content="擦除"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</local:SNWindow>
