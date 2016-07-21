@@ -19,52 +19,10 @@
             <Button Content="用户控件与自定义样式" Margin="5,0" Padding="5" Tag="Controls" Click="NavigationButton_Click"/>
             <Button Content="其他" Margin="5,0" Padding="5" Tag="Others" Click="NavigationButton_Click"/>
         </WrapPanel>
-        <StackPanel Grid.Row="1" Margin="5">
-            <WrapPanel>
-                <TextBlock x:Name="OSVersionInfo"/>
-            </WrapPanel>
-            <WrapPanel>
-                <TextBlock x:Name="VersionInfo"/>
-            </WrapPanel>
-            <WrapPanel>
-                <TextBlock x:Name="ResolutionInfo"/>
-            </WrapPanel>
-            <WrapPanel>
-                <TextBlock x:Name="WorkAreaInfo"/>
-            </WrapPanel>
-            <WrapPanel>
-                <TextBlock x:Name="DrivesInfo"/>
-            </WrapPanel>
-            <WrapPanel>
-                <TextBlock x:Name="NetworksInfo"/>
-            </WrapPanel>
-            <WrapPanel>
-                <TextBlock x:Name="CurrentNetworksInfo"/>
-            </WrapPanel>
-            <WrapPanel>
-                <TextBlock x:Name="SystemDirectoryInfo"/>
-            </WrapPanel>
-            <WrapPanel>
-                <TextBlock x:Name="CurrentDirectoryInfo"/>
-            </WrapPanel>
-            <WrapPanel>
-                <TextBlock x:Name="MachineNameInfo"/>
-            </WrapPanel>
-            <WrapPanel>
-                <TextBlock x:Name="UserNameInfo"/>
-            </WrapPanel>
-            <WrapPanel>
-                <TextBlock x:Name="UserDomainNameInfo"/>
-            </WrapPanel>
-            <WrapPanel>
-                <TextBlock x:Name="ProcessorCountInfo"/>
-            </WrapPanel>
-            <WrapPanel>
-                <TextBlock x:Name="TickCountInfo"/>
-            </WrapPanel>
-            <WrapPanel>
-                <TextBlock x:Name="DesktopInfo"/>
-            </WrapPanel>
-        </StackPanel>
+        <Border Grid.Row="1" Padding="5">
+            <ScrollViewer>
+                <TextBlock x:Name="Info"/>
+            </ScrollViewer>
+        </Border>
     </Grid>
 </local:SNWindow>

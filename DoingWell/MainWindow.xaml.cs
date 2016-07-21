@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net.NetworkInformation;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -16,64 +17,100 @@ namespace Shannan.DoingWell
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            string ov = "操作系统版本：（" + Environment.OSVersion + "）" + Environment.NewLine;
-            ov += "Platform：" + Environment.OSVersion.Platform + Environment.NewLine;
-            ov += "Version：" + Environment.OSVersion.Version + Environment.NewLine;
-            ov += "VersionString：" + Environment.OSVersion.VersionString + Environment.NewLine;
-            ov += "ServicePack：" + Environment.OSVersion.ServicePack + Environment.NewLine;
+            StringBuilder info = new StringBuilder();
+
+            info.AppendLine("MachineName：" + Environment.MachineName);
+            info.AppendLine("UserName：" + Environment.UserName);
+            info.AppendLine("UserDomainName：" + Environment.UserDomainName);
+            info.AppendLine();
+
+            info.AppendLine("操作系统版本：（" + Environment.OSVersion + "）");
+            info.AppendLine("Platform：" + Environment.OSVersion.Platform);
+            info.AppendLine("Version：" + Environment.OSVersion.Version);
+            info.AppendLine("VersionString：" + Environment.OSVersion.VersionString);
+            info.AppendLine("ServicePack：" + Environment.OSVersion.ServicePack);
+            info.AppendLine();
+
             if (Environment.Is64BitOperatingSystem)
-                ov += "64 Bit Operating System" + Environment.NewLine;
+                info.AppendLine("64 Bit Operating System");
             else
-                ov += "32 Bit Operating System" + Environment.NewLine;
-            OSVersionInfo.Text = ov;
+                info.AppendLine("32 Bit Operating System");
+            info.AppendLine();
 
-            string version = ".Net Framework版本号：（" + Environment.Version + "）" + Environment.NewLine;
-            version += "Major：" + Environment.Version.Major + Environment.NewLine;
-            version += "MajorRevision：" + Environment.Version.MajorRevision + Environment.NewLine;
-            version += "Minor：" + Environment.Version.Minor + Environment.NewLine;
-            version += "MinorRevision：" + Environment.Version.MinorRevision + Environment.NewLine;
-            version += "Build：" + Environment.Version.Build + Environment.NewLine;
-            version += "Revision：" + Environment.Version.Revision + Environment.NewLine;
-            VersionInfo.Text = version;
+            info.AppendLine(".Net Framework版本号：（" + Environment.Version + "）");
+            info.AppendLine("Major：" + Environment.Version.Major);
+            info.AppendLine("MajorRevision：" + Environment.Version.MajorRevision);
+            info.AppendLine("Minor：" + Environment.Version.Minor);
+            info.AppendLine("MinorRevision：" + Environment.Version.MinorRevision);
+            info.AppendLine("Build：" + Environment.Version.Build);
+            info.AppendLine("Revision：" + Environment.Version.Revision);
+            info.AppendLine();
 
-            ResolutionInfo.Text = "Resolution：" + string.Format("{0}*{1}", SystemParameters.PrimaryScreenWidth, SystemParameters.PrimaryScreenHeight) + Environment.NewLine;
+            info.AppendLine("ProcessorCount：" + Environment.ProcessorCount);
+            info.AppendLine("TickCount：" + Environment.TickCount);
+            info.AppendLine("SystemPageSize：" + Environment.SystemPageSize + " bytes");
+            info.AppendLine("SystemDirectory：" + Environment.SystemDirectory);
+            info.AppendLine();
 
-            WorkAreaInfo.Text = "WorkArea：" + string.Format("{0}*{1}", SystemParameters.WorkArea.Width, SystemParameters.WorkArea.Height) + Environment.NewLine;
+            info.AppendLine("Resolution：" + string.Format("{0}*{1}", SystemParameters.PrimaryScreenWidth, SystemParameters.PrimaryScreenHeight));
+            info.AppendLine("WorkArea：" + string.Format("{0}*{1}", SystemParameters.WorkArea.Width, SystemParameters.WorkArea.Height));
+            info.AppendLine();
 
-            SystemDirectoryInfo.Text = "SystemDirectory：" + Environment.SystemDirectory + Environment.NewLine;
-
-            CurrentDirectoryInfo.Text = "应用程序当前目录：" + Environment.CurrentDirectory + Environment.NewLine;
-
-            string drivesInfo = "Drives：" + Environment.NewLine;
+            info.AppendLine("Drives：");
             string[] drives = Environment.GetLogicalDrives();
             foreach (string drive in drives)
             {
-                drivesInfo += drive + Environment.NewLine;
+                info.AppendLine(drive);
             }
-            DrivesInfo.Text = drivesInfo;
+            info.AppendLine();
 
-            string networks = "Networks：" + Environment.NewLine;
-            string currentNetwork = string.Empty;
+            info.AppendLine("Networks：");
             foreach (NetworkInterface adapter in NetworkInterface.GetAllNetworkInterfaces())
             {
-                networks += adapter.Name + "----" + adapter.Id + "----" + adapter.Description + "----" + adapter.Speed + Environment.NewLine;
-                if (currentNetwork == string.Empty && adapter.OperationalStatus == OperationalStatus.Up)
-                {
-                    currentNetwork = adapter.Name;
-                }
+                info.AppendLine(adapter.Id + "     " + adapter.Name + "     " + adapter.Description + "     " + adapter.Speed + "     " + (adapter.OperationalStatus == OperationalStatus.Up ? "Active" : "Inactive"));
             }
-            NetworksInfo.Text = networks;
-            CurrentNetworksInfo.Text = "CurrentNetwork：" + currentNetwork + Environment.NewLine;
+            info.AppendLine();
 
-            MachineNameInfo.Text = "MachineName：" + Environment.MachineName;
-            UserNameInfo.Text = "UserName：" + Environment.UserName;
-            UserDomainNameInfo.Text = "UserDomainName：" + Environment.UserDomainName;
-            ProcessorCountInfo.Text = "ProcessorCount：" + Environment.ProcessorCount;
-            TickCountInfo.Text = "TickCount：" + Environment.TickCount;
+            if (NetworkInterface.GetIsNetworkAvailable())
+                info.AppendLine("Network is available");
+            else
+                info.AppendLine("Network is not available");
+            info.AppendLine();
 
-            DesktopInfo.Text = "Desktop：" + Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            info.AppendLine(Environment.GetFolderPath(Environment.SpecialFolder.MyComputer) + "-----MyComputer");
+            info.AppendLine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "-----UserProfile");
+            info.AppendLine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "-----Desktop");
+            info.AppendLine(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "-----DesktopDirectory");
+            info.AppendLine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "-----MyDocuments");
+            info.AppendLine(Environment.GetFolderPath(Environment.SpecialFolder.Favorites) + "-----Favorites");
+            info.AppendLine();
+
+            info.AppendLine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "-----ApplicationData");
+            info.AppendLine(Environment.GetFolderPath(Environment.SpecialFolder.Recent) + "-----Recent");
+            info.AppendLine(Environment.GetFolderPath(Environment.SpecialFolder.NetworkShortcuts) + "-----NetworkShortcuts");
+            info.AppendLine(Environment.GetFolderPath(Environment.SpecialFolder.StartMenu) + "-----StartMenu");
+            info.AppendLine(Environment.GetFolderPath(Environment.SpecialFolder.Programs) + "-----Programs");
+            info.AppendLine(Environment.GetFolderPath(Environment.SpecialFolder.Startup) + "-----Startup");
+            info.AppendLine();
+
+            info.AppendLine(Environment.GetFolderPath(Environment.SpecialFolder.Cookies) + "-----Cookies");
+            info.AppendLine(Environment.GetFolderPath(Environment.SpecialFolder.History) + "-----History");
+            info.AppendLine();
+
+            info.AppendLine("ProgramFilesX86：" + Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86));
+            info.AppendLine("ProgramFiles：" + Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles));
+            info.AppendLine("Windows：" + Environment.GetFolderPath(Environment.SpecialFolder.Windows));
+            info.AppendLine("System：" + Environment.GetFolderPath(Environment.SpecialFolder.System));
+            info.AppendLine("SystemX86：" + Environment.GetFolderPath(Environment.SpecialFolder.SystemX86));
+            info.AppendLine("Fonts：" + Environment.GetFolderPath(Environment.SpecialFolder.Fonts));
+            info.AppendLine();
             //Environment.GetFolderPath(Environment.SpecialFolder对象);
-            //Environment.SpecialFolder对象提供系统保留文件夹标识，例如: Environment.SpecialFolder.Desktop表示桌面文件夹的路径。
+            //Environment.SpecialFolder对象提供系统保留文件夹标识，例如: Environment.SpecialFolder.Desktop表示桌面文件夹的路径
+
+            info.AppendLine("应用程序当前目录：" + Environment.CurrentDirectory);
+            info.AppendLine();
+
+            Info.Text = info.ToString();
         }
 
         private void NavigationButton_Click(object sender, RoutedEventArgs e)
