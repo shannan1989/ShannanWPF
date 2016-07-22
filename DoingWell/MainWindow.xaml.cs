@@ -118,6 +118,10 @@ namespace Shannan.DoingWell
             string tag = (sender as Button).Tag.ToString();
             switch (tag)
             {
+                case "Browser":
+                    Window browserWindow = new BrowserWindow();
+                    browserWindow.ShowDialog();
+                    break;
                 case "VideoPlayer":
                     Window videoWindow = new VideoWindow();
                     videoWindow.ShowDialog();

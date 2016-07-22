@@ -14,6 +14,7 @@
         </Grid.RowDefinitions>
         <WrapPanel Grid.Row="0" Margin="5">
             <Label Content="导航>"/>
+            <Button Content="内置浏览器" Margin="5,0" Padding="5" Tag="Browser" Click="NavigationButton_Click"/>
             <Button Content="视频播放器" Margin="5,0" Padding="5" Tag="VideoPlayer" Click="NavigationButton_Click"/>
             <Button Content="画图板" Margin="5,0" Padding="5" Tag="DrawingBoard" Click="NavigationButton_Click"/>
             <Button Content="用户控件与自定义样式" Margin="5,0" Padding="5" Tag="Controls" Click="NavigationButton_Click"/>
