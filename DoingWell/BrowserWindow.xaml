@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Shannan.DoingWell"
         xmlns:awe="http://schemas.awesomium.com/winfx" 
         mc:Ignorable="d"
-        Title="内置浏览器"
+        Title="山南浏览器"
         d:DesignHeight="1080" d:DesignWidth="1920">
     <Grid>
         <awe:WebControl x:Name="webControl" Source="http://www.shannanshuibei.net/"/>
