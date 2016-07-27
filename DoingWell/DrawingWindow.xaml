@@ -13,7 +13,7 @@
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Border Grid.Column="0" Background="Red"></Border>
+        <Border Grid.Column="0" Background="Red"/>
         <Border Grid.Column="1">
             <Grid>
                 <Image x:Name="initImage" Stretch="Uniform" Width="750"/>

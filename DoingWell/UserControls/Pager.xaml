@@ -7,18 +7,18 @@
              d:DesignHeight="30" d:DesignWidth="1300">
     <UserControl.Resources>
         <Style TargetType="{x:Type TextBlock}">
-            <Setter Property="FontSize" Value="12"></Setter>
-            <Setter Property="Foreground" Value="#333"></Setter>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Foreground" Value="#333"/>
         </Style>
 
         <Style x:Key="SNButtonNormal" TargetType="{x:Type Button}">
-            <Setter Property="BorderBrush" Value="{Binding BorderBrush,FallbackValue='#ddd'}"></Setter>
-            <Setter Property="Background" Value="{Binding Background,FallbackValue='#fff'}"></Setter>
-            <Setter Property="Padding" Value="{Binding Padding,FallbackValue='5,0'}"></Setter>
-            <Setter Property="MinWidth" Value="{Binding MinWidth,FallbackValue=26}"></Setter>
-            <Setter Property="Height" Value="{Binding Height,FallbackValue=26}"></Setter>
-            <Setter Property="FontSize" Value="{Binding FontSize,FallbackValue=12}"></Setter>
-            <Setter Property="Foreground" Value="{Binding Foreground,FallbackValue='#333'}"></Setter>
+            <Setter Property="BorderBrush" Value="{Binding BorderBrush,FallbackValue='#ddd'}"/>
+            <Setter Property="Background" Value="{Binding Background,FallbackValue='#fff'}"/>
+            <Setter Property="Padding" Value="{Binding Padding,FallbackValue='5,0'}"/>
+            <Setter Property="MinWidth" Value="{Binding MinWidth,FallbackValue=26}"/>
+            <Setter Property="Height" Value="{Binding Height,FallbackValue=26}"/>
+            <Setter Property="FontSize" Value="{Binding FontSize,FallbackValue=12}"/>
+            <Setter Property="Foreground" Value="{Binding Foreground,FallbackValue='#333'}"/>
             <Setter Property="Cursor" Value="Hand"/>
             <Setter Property="Template">
                 <Setter.Value>
@@ -27,9 +27,9 @@
                             <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
                         </Border>
                         <ControlTemplate.Triggers>
-                            <Trigger Property="IsDefaulted" Value="True"></Trigger>
-                            <Trigger Property="IsMouseOver" Value="True"></Trigger>
-                            <Trigger Property="IsPressed" Value="True"></Trigger>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
                             <Trigger Property="IsEnabled" Value="False">
                                 <Setter Property="Background" TargetName="border" Value="#fff"/>
                                 <Setter Property="BorderBrush" TargetName="border" Value="#eee"/>
@@ -41,9 +41,9 @@
             </Setter>
         </Style>
         <Style x:Key="SNButtonCurrent" TargetType="{x:Type Button}" BasedOn="{StaticResource SNButtonNormal}">
-            <Setter Property="BorderBrush" Value="#da3610"></Setter>
-            <Setter Property="Background" Value="#da3610"></Setter>
-            <Setter Property="Foreground" Value="#fff"></Setter>
+            <Setter Property="BorderBrush" Value="#da3610"/>
+            <Setter Property="Background" Value="#da3610"/>
+            <Setter Property="Foreground" Value="#fff"/>
         </Style>
 
         <Style TargetType="{x:Type Button}" BasedOn="{StaticResource SNButtonNormal}"/>

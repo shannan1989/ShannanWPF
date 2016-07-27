@@ -28,8 +28,8 @@
                         <Trigger Property="IsChecked" Value="{x:Null}">
                             <Setter TargetName="CheckIcon" Property="Source" Value="/DoingWell;Component/Images/Styles/checkbox_unchecked.png"/>
                         </Trigger>
-                        <Trigger Property="IsMouseOver" Value="true"></Trigger>
-                        <Trigger Property="IsEnabled" Value="False"></Trigger>
+                        <Trigger Property="IsMouseOver" Value="true"/>
+                        <Trigger Property="IsEnabled" Value="False"/>
                         <Trigger Property="controls:ToggleButtonHelper.ContentDirection" Value="RightToLeft">
                             <Setter TargetName="LeftCol" Property="Width" Value="*"/>
                             <Setter TargetName="PART_CHECKBOX" Property="Grid.Column" Value="1"/>
