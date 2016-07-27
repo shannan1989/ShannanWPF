@@ -3,6 +3,7 @@ using System.Net.NetworkInformation;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace Shannan.DoingWell
 {
@@ -17,6 +18,8 @@ namespace Shannan.DoingWell
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
+            Mouse.OverrideCursor = Tools.CursorGenerator.Create(new Uri("pack://application:,,,/Images/eraser.ico"), 0, 8);
+
             StringBuilder info = new StringBuilder();
 
             info.AppendLine("MachineName：" + Environment.MachineName);
