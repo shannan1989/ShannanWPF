@@ -20,6 +20,9 @@
                 <uc:Pager x:Name="pager" Total="500" ShowNumber="5" PageSize="50"/>
             </Border>
             <Border Padding="5">
+                <uc:ProgressRing/>
+            </Border>
+            <Border Padding="5">
                 <uc:ImageViewer x:Name="imageViewer"/>
             </Border>
             <Border Padding="5">
