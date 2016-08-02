@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Media.Imaging;
 
 namespace Shannan.DoingWell
@@ -25,5 +26,16 @@ namespace Shannan.DoingWell
             //MessageBox.Show(pager.CurrentPage.ToString());
         }
 
+        private void TreeView_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+        {
+            if ((e.NewValue as TreeViewItem).HasItems)
+            {
+                (e.OldValue as TreeViewItem).IsSelected = true;
+            }
+            if (e.OldValue != null && (e.OldValue as TreeViewItem).HasItems)
+            {
+                (e.OldValue as TreeViewItem).IsExpanded = true;
+            }
+        }
     }
 }

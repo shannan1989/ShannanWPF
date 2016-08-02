@@ -81,6 +81,22 @@
                     <ComboBoxItem Content="haha"/>
                 </ComboBox>
             </WrapPanel>
+            <WrapPanel Margin="10">
+                <TreeView Width="250" Background="#393737" SelectedItemChanged="TreeView_SelectedItemChanged">
+                    <TreeViewItem Header="haha1">
+                        <TreeViewItem Header="haha11"/>
+                        <TreeViewItem Header="haha12"/>
+                    </TreeViewItem>
+                    <TreeViewItem Header="haha2">
+                        <TreeViewItem Header="haha21"/>
+                        <TreeViewItem Header="haha22"/>
+                    </TreeViewItem>
+                    <TreeViewItem Header="haha3">
+                        <TreeViewItem Header="haha31"/>
+                        <TreeViewItem Header="haha32"/>
+                    </TreeViewItem>
+                </TreeView>
+            </WrapPanel>
         </StackPanel>
         <StackPanel Grid.Column="2" Margin="10">
             <TextBlock Text="自定义控件" TextAlignment="Center" FontWeight="Bold" FontSize="20" Margin="0,0,0,20"/>
