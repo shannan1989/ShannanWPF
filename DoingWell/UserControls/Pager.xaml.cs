@@ -14,16 +14,16 @@ namespace Shannan.DoingWell.UserControls
         public Pager()
         {
             InitializeComponent();
-            this.Loaded += Pager_Loaded;
-        }
-
-        private void Pager_Loaded(object sender, RoutedEventArgs e)
-        {
+            Loaded += Pager_Loaded;
             PART_FirstButton.Click += FirstButton_Click;
             PART_LastButton.Click += LastButton_Click;
             PART_PreviousButton.Click += PreviousButton_Click;
             PART_NextButton.Click += NextButton_Click;
-            this.RefreshLayout();
+        }
+
+        private void Pager_Loaded(object sender, RoutedEventArgs e)
+        {
+            RefreshLayout();
         }
 
         #region Public Properties
@@ -112,38 +112,38 @@ namespace Shannan.DoingWell.UserControls
         private void FirstButton_Click(object sender, RoutedEventArgs e)
         {
             CurrentPage = 1;
-            this.RefreshLayout();
-            this.RaiseEvent();
+            RefreshLayout();
+            RaiseEvent();
         }
 
         private void LastButton_Click(object sender, RoutedEventArgs e)
         {
             CurrentPage = PageCount;
-            this.RefreshLayout();
-            this.RaiseEvent();
+            RefreshLayout();
+            RaiseEvent();
         }
 
         private void PreviousButton_Click(object sender, RoutedEventArgs e)
         {
             CurrentPage -= 1;
             CurrentPage = Math.Max(CurrentPage, 1);
-            this.RefreshLayout();
-            this.RaiseEvent();
+            RefreshLayout();
+            RaiseEvent();
         }
 
         private void NextButton_Click(object sender, RoutedEventArgs e)
         {
             CurrentPage += 1;
             CurrentPage = Math.Min(CurrentPage, PageCount);
-            this.RefreshLayout();
-            this.RaiseEvent();
+            RefreshLayout();
+            RaiseEvent();
         }
 
         private void NumberButton_Click(object sender, RoutedEventArgs e)
         {
             CurrentPage = int.Parse((sender as Control).Tag.ToString());
-            this.RefreshLayout();
-            this.RaiseEvent();
+            RefreshLayout();
+            RaiseEvent();
         }
 
         private void CalPageCount()
@@ -191,24 +191,24 @@ namespace Shannan.DoingWell.UserControls
                 PART_LastButton.IsEnabled = PART_NextButton.IsEnabled = false;
                 if (IsShowWhenEmpty == false)
                 {
-                    this.Visibility = Visibility.Collapsed;
+                    Visibility = Visibility.Collapsed;
                 }
                 else
                 {
-                    this.Visibility = Visibility.Visible;
+                    Visibility = Visibility.Visible;
                 }
             }
             else
             {
-                this.Visibility = Visibility.Visible;
+                Visibility = Visibility.Visible;
             }
         }
 
         private void RaiseEvent()
         {
-            if (this.CurrentPageChanged != null)
+            if (CurrentPageChanged != null)
             {
-                this.CurrentPageChanged(this, new RoutedEventArgs());
+                CurrentPageChanged(this, new RoutedEventArgs());
             }
         }
     }
