@@ -1,4 +1,7 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Input;
 
 namespace Shannan.DoingWell
@@ -9,6 +12,7 @@ namespace Shannan.DoingWell
         {
             Loaded += SNWindow_Loaded;
             PreviewMouseDoubleClick += SNWindow_PreviewMouseDoubleClick;
+            AddHandler(ButtonBase.ClickEvent, new RoutedEventHandler(ButtonClicked));
 
             ShowInTaskbar = true;
             WindowState = WindowState.Maximized;
@@ -24,6 +28,11 @@ namespace Shannan.DoingWell
         private void SNWindow_PreviewMouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             e.Handled = true;
+        }
+
+        private void ButtonClicked(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine((e.OriginalSource as Button));
         }
     }
 }
