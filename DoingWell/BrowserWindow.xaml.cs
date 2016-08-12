@@ -24,7 +24,8 @@ namespace Shannan.DoingWell
             webControl.ShowContextMenu += WebControl_ShowContextMenu;
             webControl.NativeViewInitialized += WebControl_NativeViewInitialized;
             webControl.WindowClose += WebControl_WindowClose;
-        }
+            webControl.JavascriptMessage += WebControl_JavascriptMessage;
+        }  
 
         private void BrowserWindow_ContentRendered(object sender, EventArgs e)
         {
@@ -62,6 +63,20 @@ namespace Shannan.DoingWell
 
         private void WebControl_ShowContextMenu(object sender, ContextMenuEventArgs e)
         {
+        }
+
+        private void WebControl_JavascriptMessage(object sender, JavascriptMessageEventArgs e)
+        {
+            //<script type="text/javascript">
+            //      function someFuction(sender, args) {
+            //            var iValue = { someProperty: 42 };
+            //            var res = OSMJIF.sendMessage('someMessage', iValue);
+            //            alert(res);
+            //      }
+            //</script>
+            //网页js需判断OSMJIF是否为undefined
+            MessageBox.Show(e.Message);
+            e.Result = "Processed";
         }
     }
 }
