@@ -36,6 +36,9 @@
                 <TextBox Width="200" controls:TextBoxHelper.Watermark="input your email"/>
             </WrapPanel>
             <WrapPanel Margin="10">
+                <TextBox Width="200" BorderThickness="1" controls:TextBoxHelper.Watermark="圆角输入框" controls:ControlsHelper.CornerRadius="2"/>
+            </WrapPanel>
+            <WrapPanel Margin="10">
                 <PasswordBox controls:TextBoxHelper.Watermark="input your password" Width="200"/>
             </WrapPanel>
             <WrapPanel Margin="10">
