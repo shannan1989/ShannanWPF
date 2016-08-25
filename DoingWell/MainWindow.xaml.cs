@@ -137,6 +137,10 @@ namespace Shannan.DoingWell
                     Window controlsWindow = new ControlsWindow();
                     controlsWindow.ShowDialog();
                     break;
+                case "Shapes":
+                    Window shapesWindow = new ShapesWindow();
+                    shapesWindow.ShowDialog();
+                    break;
                 default:
                     break;
             }
