@@ -24,7 +24,7 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="auto"/>
                         </Grid.ColumnDefinitions>
-                        <Border x:Name="border" Grid.ColumnSpan="2" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}"/>
+                        <Border x:Name="border" Grid.ColumnSpan="2" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="{TemplateBinding controls:ControlsHelper.CornerRadius}"/>
                         <TextBox x:Name="PART_TextBox" Grid.Column="0" IsReadOnly="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0" Background="Transparent" Margin="5,0" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" FontFamily="{TemplateBinding FontFamily}" Foreground="{TemplateBinding Foreground}" FontSize="{TemplateBinding FontSize}" controls:TextBoxHelper.Watermark="选择日期" Text="{Binding Path=SelectedDate,Mode=OneWay,RelativeSource={RelativeSource TemplatedParent},StringFormat='yyy-MM-dd'}"/>
                         <Button x:Name="PART_Button" Grid.Column="1" IsTabStop="False">
                             <Button.Template>
