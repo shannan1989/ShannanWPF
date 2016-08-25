@@ -40,30 +40,34 @@
                 <PasswordBox Width="150" controls:TextBoxHelper.Watermark="input your password" Margin="0,0,10,0"/>
                 <PasswordBox Width="150" controls:TextBoxHelper.Watermark="input your password" Password="123456"/>
             </WrapPanel>
-            <WrapPanel Margin="10">
-                <CheckBox Content="男" IsChecked="True"/>
-                <CheckBox Content="女"/>
-                <CheckBox Content="双性" IsEnabled="False"/>
+            <WrapPanel>
+                <WrapPanel Margin="10">
+                    <CheckBox Content="男" IsChecked="True"/>
+                    <CheckBox Content="女"/>
+                    <CheckBox Content="双性" IsEnabled="False"/>
+                </WrapPanel>
+                <WrapPanel Margin="10">
+                    <CheckBox Content="男" IsChecked="True" controls:ToggleButtonHelper.ContentDirection="RightToLeft"/>
+                    <CheckBox Content="女" controls:ToggleButtonHelper.ContentDirection="RightToLeft"/>
+                    <CheckBox Content="双性" IsEnabled="False" controls:ToggleButtonHelper.ContentDirection="RightToLeft"/>
+                </WrapPanel>
             </WrapPanel>
-            <WrapPanel Margin="10">
-                <CheckBox Content="男" IsChecked="True" controls:ToggleButtonHelper.ContentDirection="RightToLeft"/>
-                <CheckBox Content="女" controls:ToggleButtonHelper.ContentDirection="RightToLeft"/>
-                <CheckBox Content="双性" IsEnabled="False" controls:ToggleButtonHelper.ContentDirection="RightToLeft"/>
-            </WrapPanel>
-            <WrapPanel Margin="10">
-                <RadioButton Content="男" IsChecked="True"/>
-                <RadioButton Content="女"/>
-                <RadioButton Content="变性" IsEnabled="False"/>
-            </WrapPanel>
-            <WrapPanel Margin="10">
-                <RadioButton Content="男"/>
-                <RadioButton Content="女"/>
-                <RadioButton Content="变性" IsEnabled="False" IsChecked="True"/>
-            </WrapPanel>
-            <WrapPanel Margin="10">
-                <RadioButton Content="男" controls:ToggleButtonHelper.ContentDirection="RightToLeft"/>
-                <RadioButton Content="女" controls:ToggleButtonHelper.ContentDirection="RightToLeft"/>
-                <RadioButton Content="变性" IsEnabled="False" IsChecked="True" controls:ToggleButtonHelper.ContentDirection="RightToLeft"/>
+            <WrapPanel>
+                <WrapPanel Margin="10">
+                    <RadioButton Content="男" IsChecked="True"/>
+                    <RadioButton Content="女"/>
+                    <RadioButton Content="变性" IsEnabled="False"/>
+                </WrapPanel>
+                <WrapPanel Margin="10">
+                    <RadioButton Content="男"/>
+                    <RadioButton Content="女"/>
+                    <RadioButton Content="变性" IsEnabled="False" IsChecked="True"/>
+                </WrapPanel>
+                <WrapPanel Margin="10">
+                    <RadioButton Content="男" controls:ToggleButtonHelper.ContentDirection="RightToLeft"/>
+                    <RadioButton Content="女" controls:ToggleButtonHelper.ContentDirection="RightToLeft"/>
+                    <RadioButton Content="变性" IsEnabled="False" IsChecked="True" controls:ToggleButtonHelper.ContentDirection="RightToLeft"/>
+                </WrapPanel>
             </WrapPanel>
             <WrapPanel Margin="10">
                 <ComboBox Text="下拉框" Width="150" Margin="0,0,10,0">
@@ -103,6 +107,14 @@
                         <TreeViewItem Header="haha32"/>
                     </TreeViewItem>
                 </TreeView>
+            </WrapPanel>
+            <WrapPanel Margin="10">
+                <ProgressBar Style="{StaticResource SNCircleProgressBar}" IsIndeterminate="True"/>
+                <ProgressBar Style="{StaticResource SNCircleProgressBar}" Value="60"/>
+            </WrapPanel>
+            <WrapPanel Margin="10">
+                <ProgressBar Width="200" IsIndeterminate="True" Margin="0,0,10,0"/>
+                <ProgressBar Width="200" Value="60"/>
             </WrapPanel>
             <WrapPanel Margin="10">
                 <TextBlock Width="{Binding Path=FontSize,RelativeSource={RelativeSource Self}}" FontSize="25" TextWrapping="Wrap" Text="二十四桥仍在"/>
