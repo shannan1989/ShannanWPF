@@ -1,0 +1,63 @@
+﻿<local:SNWindow x:Class="Shannan.DoingWell.ShapesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Shannan.DoingWell"
+        mc:Ignorable="d"
+        Title="绘图" d:DesignHeight="1080" d:DesignWidth="1920">
+    <Grid>
+        <Line X1="10" Y1="20" X2="300" Y2="20" Stroke="Red" StrokeThickness="1"/>
+        <Line X1="10" Y1="40" X2="300" Y2="40" Stroke="Orange" StrokeThickness="2"/>
+        <Line X1="10" Y1="60" X2="300" Y2="60" Stroke="Green" StrokeThickness="3"/>
+        <Line X1="10" Y1="80" X2="300" Y2="80" Stroke="Purple" StrokeThickness="4"/>
+        <Line X1="10" Y1="100" X2="300" Y2="100" Stroke="Black" StrokeThickness="5"/>
+        <Line X1="10" Y1="120" X2="300" Y2="120" Stroke="Black" StrokeThickness="1" StrokeDashArray="3"/>
+        <Line X1="10" Y1="140" X2="300" Y2="140" Stroke="Black" StrokeThickness="2" StrokeDashArray="3"/>
+        <Line X1="10" Y1="160" X2="300" Y2="160" Stroke="Black" StrokeThickness="2" StrokeDashArray="6"/>
+        <Line X1="10" Y1="180" X2="300" Y2="180" Stroke="Black" StrokeThickness="6" StrokeEndLineCap="Flat"/>
+        <Line X1="10" Y1="200" X2="300" Y2="200" Stroke="Black" StrokeThickness="6" StrokeStartLineCap="Round" StrokeEndLineCap="Triangle"/>
+        <Line X1="10" Y1="220" X2="300" Y2="220" Stroke="Black" StrokeThickness="6" StrokeStartLineCap="Triangle" StrokeEndLineCap="Round"/>
+        <Line X1="10" Y1="240" X2="300" Y2="240" StrokeThickness="6" StrokeEndLineCap="Round">
+            <Line.Stroke>
+                <LinearGradientBrush StartPoint="0,0.5" EndPoint="1,0.5">
+                    <GradientStop Color="Yellow" Offset="0"/>
+                    <GradientStop Color="Blue" Offset=".25"/>
+                    <GradientStop Color="Yellow" Offset=".5"/>
+                    <GradientStop Color="Green" Offset="1"/>
+                </LinearGradientBrush>
+            </Line.Stroke>
+        </Line>
+        <Line X1="350" Y1="240" X2="450" Y2="240" StrokeThickness="100">
+            <Line.Stroke>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="Yellow" Offset="0"/>
+                    <GradientStop Color="Blue" Offset=".25"/>
+                    <GradientStop Color="Silver" Offset=".5"/>
+                    <GradientStop Color="Red" Offset=".75"/>
+                    <GradientStop Color="Green" Offset="1"/>
+                </LinearGradientBrush>
+            </Line.Stroke>
+        </Line>
+        <Line X1="10" Y1="260" X2="300" Y2="260" StrokeThickness="8" StrokeEndLineCap="Round">
+            <Line.Stroke>
+                <RadialGradientBrush>
+                    <GradientStop Color="Yellow" Offset="0"/>
+                    <GradientStop Color="Blue" Offset=".5"/>
+                    <GradientStop Color="Green" Offset="1"/>
+                </RadialGradientBrush>
+            </Line.Stroke>
+        </Line>
+        <Line X1="500" Y1="240" X2="600" Y2="240" StrokeThickness="100">
+            <Line.Stroke>
+                <RadialGradientBrush SpreadMethod="Reflect">
+                    <GradientStop Offset="0"/>
+                    <GradientStop Color="Red" Offset="0.25"/>
+                    <GradientStop Color="Yellow" Offset="0.5"/>
+                    <GradientStop Color="Silver" Offset=".75"/>
+                    <GradientStop Color="Blue" Offset="1"/>
+                </RadialGradientBrush>
+            </Line.Stroke>
+        </Line>
+    </Grid>
+</local:SNWindow>
