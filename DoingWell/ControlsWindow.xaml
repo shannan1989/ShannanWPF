@@ -33,16 +33,12 @@
         <StackPanel Grid.Column="1" Margin="10">
             <TextBlock Text="自定义样式" TextAlignment="Center" FontWeight="Bold" FontSize="20" Margin="0,0,0,20"/>
             <WrapPanel Margin="10">
-                <TextBox Width="200" controls:TextBoxHelper.Watermark="input your email"/>
+                <TextBox Width="150" controls:TextBoxHelper.Watermark="input your email" Margin="0,0,10,0"/>
+                <TextBox Width="150" controls:TextBoxHelper.Watermark="圆角输入框" controls:ControlsHelper.CornerRadius="2" BorderThickness="1"/>
             </WrapPanel>
             <WrapPanel Margin="10">
-                <TextBox Width="200" BorderThickness="1" controls:TextBoxHelper.Watermark="圆角输入框" controls:ControlsHelper.CornerRadius="2"/>
-            </WrapPanel>
-            <WrapPanel Margin="10">
-                <PasswordBox controls:TextBoxHelper.Watermark="input your password" Width="200"/>
-            </WrapPanel>
-            <WrapPanel Margin="10">
-                <PasswordBox Password="123456" controls:TextBoxHelper.Watermark="password" Width="200"/>
+                <PasswordBox Width="150" controls:TextBoxHelper.Watermark="input your password" Margin="0,0,10,0"/>
+                <PasswordBox Width="150" controls:TextBoxHelper.Watermark="input your password" Password="123456"/>
             </WrapPanel>
             <WrapPanel Margin="10">
                 <CheckBox Content="男" IsChecked="True"/>
@@ -70,19 +66,27 @@
                 <RadioButton Content="变性" IsEnabled="False" IsChecked="True" controls:ToggleButtonHelper.ContentDirection="RightToLeft"/>
             </WrapPanel>
             <WrapPanel Margin="10">
-                <DatePicker/>
-            </WrapPanel>
-            <WrapPanel Margin="10">
-                <Calendar/>
-            </WrapPanel>
-            <WrapPanel Margin="10">
-                <ComboBox Text="下拉框">
+                <ComboBox Text="下拉框" Width="150" Margin="0,0,10,0">
                     <ComboBoxItem Content="haha"/>
                     <ComboBoxItem Content="haha"/>
                     <ComboBoxItem Content="haha"/>
                     <ComboBoxItem Content="haha"/>
                     <ComboBoxItem Content="haha"/>
                 </ComboBox>
+                <ComboBox Text="下拉框" Width="150" BorderThickness="1" controls:ControlsHelper.CornerRadius="2">
+                    <ComboBoxItem Content="haha"/>
+                    <ComboBoxItem Content="haha"/>
+                    <ComboBoxItem Content="haha"/>
+                    <ComboBoxItem Content="haha"/>
+                    <ComboBoxItem Content="haha"/>
+                </ComboBox>
+            </WrapPanel>
+            <WrapPanel Margin="10">
+                <DatePicker Width="150" Margin="0,0,10,0"/>
+                <DatePicker Width="150" BorderThickness="1" controls:ControlsHelper.CornerRadius="2"/>
+            </WrapPanel>
+            <WrapPanel Margin="10">
+                <Calendar/>
             </WrapPanel>
             <WrapPanel Margin="10">
                 <TreeView Width="250" Background="#393737" SelectedItemChanged="TreeView_SelectedItemChanged">
