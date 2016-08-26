@@ -24,6 +24,9 @@
                 <uc:ProgressRing/>
             </Border>
             <Border Padding="5">
+                <uc:QuantitySelector x:Name="quantitySelector" Height="30"/>
+            </Border>
+            <Border Padding="5">
                 <uc:ImageViewer x:Name="imageViewer"/>
             </Border>
             <Border Padding="5">

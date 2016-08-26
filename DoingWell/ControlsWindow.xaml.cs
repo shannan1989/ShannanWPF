@@ -18,7 +18,14 @@ namespace Shannan.DoingWell
         {
             pager.CurrentPageChanged += Pager_CurrentPageChanged;
 
+            quantitySelector.QuantityChanged += QuantitySelector_QuantityChanged;
+
             imageViewer.Source = new BitmapImage(new Uri("http://uploads.xuexila.com/allimg/1507/641-150G31I335.jpg"));
+        }
+
+        private void QuantitySelector_QuantityChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show(quantitySelector.Quantity.ToString());
         }
 
         private void Pager_CurrentPageChanged(object sender, EventArgs e)
