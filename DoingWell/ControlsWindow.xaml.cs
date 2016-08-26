@@ -21,7 +21,7 @@ namespace Shannan.DoingWell
             imageViewer.Source = new BitmapImage(new Uri("http://uploads.xuexila.com/allimg/1507/641-150G31I335.jpg"));
         }
 
-        private void Pager_CurrentPageChanged(object sender, RoutedEventArgs e)
+        private void Pager_CurrentPageChanged(object sender, EventArgs e)
         {
             //MessageBox.Show(pager.CurrentPage.ToString());
         }

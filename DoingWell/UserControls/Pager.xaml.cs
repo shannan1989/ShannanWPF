@@ -8,7 +8,7 @@ namespace Shannan.DoingWell.UserControls
     public partial class Pager : UserControl
     {
         #region Public Events
-        public event RoutedEventHandler CurrentPageChanged;
+        public event EventHandler CurrentPageChanged;
         #endregion Public Events
 
         public Pager()
@@ -206,10 +206,7 @@ namespace Shannan.DoingWell.UserControls
 
         private void RaiseEvent()
         {
-            if (CurrentPageChanged != null)
-            {
-                CurrentPageChanged(this, new RoutedEventArgs());
-            }
+            CurrentPageChanged?.Invoke(this, new EventArgs());
         }
     }
 }
