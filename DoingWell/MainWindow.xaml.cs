@@ -1,9 +1,9 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Net.NetworkInformation;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Input;
 
 namespace Shannan.DoingWell
 {
@@ -18,8 +18,61 @@ namespace Shannan.DoingWell
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            Mouse.OverrideCursor = Tools.CursorGenerator.Create(new Uri("pack://application:,,,/Images/eraser.ico"), 0, 8);
+            //Mouse.OverrideCursor = Tools.CursorGenerator.Create(new Uri("pack://application:,,,/Images/eraser.ico"), 0, 8);
 
+            GetSystemInfo();
+
+            Application.Current.Dispatcher.BeginInvoke(new Action(delegate
+            {
+                GetInstalledApplications();
+            }));
+
+        }
+
+        private void GetInstalledApplications()
+        {
+            StringBuilder info = new StringBuilder();
+            string keyStr = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall";
+
+            using (RegistryKey key = Registry.LocalMachine.OpenSubKey(keyStr))
+            {
+                foreach (string subKeyName in key.GetSubKeyNames())
+                {
+                    info.AppendLine(subKeyName);
+                    using (RegistryKey subKey = key.OpenSubKey(subKeyName))
+                    {
+                        foreach (string name in subKey.GetValueNames())
+                        {
+                            info.AppendLine("---- " + name + " : " + subKey.GetValue(name));
+                        }
+                    }
+                    info.AppendLine();
+                }
+            }
+
+            info.AppendLine("----------------------------------------------------------");
+
+            using (RegistryKey key = Registry.CurrentUser.OpenSubKey(keyStr))
+            {
+                foreach (string subKeyName in key.GetSubKeyNames())
+                {
+                    info.AppendLine(subKeyName);
+                    using (RegistryKey subKey = key.OpenSubKey(subKeyName))
+                    {
+                        foreach (string name in subKey.GetValueNames())
+                        {
+                            info.AppendLine("---- " + name + " : " + subKey.GetValue(name));
+                        }
+                    }
+                    info.AppendLine();
+                }
+            }
+
+            ApplicationsInfo.Text = info.ToString();
+        }
+
+        private void GetSystemInfo()
+        {
             StringBuilder info = new StringBuilder();
 
             info.AppendLine("MachineName：" + Environment.MachineName);
@@ -113,7 +166,7 @@ namespace Shannan.DoingWell
             info.AppendLine("应用程序当前目录：" + Environment.CurrentDirectory);
             info.AppendLine();
 
-            Info.Text = info.ToString();
+            SystemInfo.Text = info.ToString();
         }
 
         private void NavigationButton_Click(object sender, RoutedEventArgs e)

@@ -21,10 +21,20 @@
             <Button Content="绘图" Margin="5,0" Padding="5" Tag="Shapes" Click="NavigationButton_Click"/>
             <Button Content="其他" Margin="5,0" Padding="5" Tag="Others" Click="NavigationButton_Click"/>
         </WrapPanel>
-        <Border Grid.Row="1" Padding="5">
-            <ScrollViewer>
-                <TextBlock x:Name="Info"/>
-            </ScrollViewer>
+        <Border Grid.Row="1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <ScrollViewer Padding="5">
+                    <TextBlock x:Name="SystemInfo"/>
+                </ScrollViewer>
+                <ScrollViewer Padding="5" Grid.Column="1">
+                    <TextBlock x:Name="ApplicationsInfo"/>
+                </ScrollViewer>
+            </Grid>
         </Border>
     </Grid>
 </local:SNWindow>
