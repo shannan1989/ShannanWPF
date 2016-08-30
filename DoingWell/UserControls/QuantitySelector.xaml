@@ -17,11 +17,11 @@
                 <ControlTemplate>
                     <Grid Cursor="Hand" Width="{Binding Path=ActualHeight,RelativeSource={RelativeSource TemplatedParent}}">
                         <Border BorderThickness="1" BorderBrush="#ddd" CornerRadius="3,0,0,3" Background="#fff"/>
-                        <Image x:Name="btnImage" Stretch="Uniform" Source="/DoingWell;Component/Images/UserControls/decrement_enabled.png"/>
+                        <Image x:Name="btnImage" Stretch="Uniform" Source="pack://application:,,,/Images/UserControls/decrement_enabled.png"/>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsEnabled" Value="false">
-                            <Setter TargetName="btnImage" Property="Source" Value="/DoingWell;Component/Images/UserControls/decrement_disabled.png"/>
+                            <Setter TargetName="btnImage" Property="Source" Value="pack://application:,,,/Images/UserControls/decrement_disabled.png"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -35,11 +35,11 @@
                 <ControlTemplate>
                     <Grid Cursor="Hand" Width="{Binding Path=ActualHeight,RelativeSource={RelativeSource TemplatedParent}}">
                         <Border BorderThickness="1" BorderBrush="#ddd" CornerRadius="0,3,3,0" Background="#fff"/>
-                        <Image x:Name="btnImage" Stretch="Uniform" Source="/DoingWell;Component/Images/UserControls/increment_enabled.png"/>
+                        <Image x:Name="btnImage" Stretch="Uniform" Source="pack://application:,,,/Images/UserControls/increment_enabled.png"/>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsEnabled" Value="false">
-                            <Setter TargetName="btnImage" Property="Source" Value="/DoingWell;Component/Images/UserControls/increment_disabled.png"/>
+                            <Setter TargetName="btnImage" Property="Source" Value="pack://application:,,,/Images/UserControls/increment_disabled.png"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

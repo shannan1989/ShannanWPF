@@ -41,7 +41,7 @@
 
                             <Border x:Name="Bd" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
                                 <StackPanel Orientation="Horizontal" Margin="12,0,0,0">
-                                    <Image x:Name="ItemIcon" Stretch="Uniform" Width="8" Height="8" Margin="12,0,0,0" Source="/DoingWell;Component/Images/Styles/treeviewitem_icon.png" Visibility="Collapsed"/>
+                                    <Image x:Name="ItemIcon" Stretch="Uniform" Width="8" Height="8" Margin="12,0,0,0" Source="pack://application:,,,/Images/Styles/treeviewitem_icon.png" Visibility="Collapsed"/>
                                     <ContentPresenter x:Name="PART_Header" Content="{TemplateBinding Header}" ContentSource="Header" ContentTemplate="{TemplateBinding HeaderTemplate}" ContentStringFormat="{TemplateBinding HeaderStringFormat}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="Center" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" Margin="8,0,0,0"/>
                                 </StackPanel>
                             </Border>
@@ -54,12 +54,12 @@
                                             <Setter.Value>
                                                 <ControlTemplate TargetType="{x:Type ToggleButton}">
                                                     <Border Background="Transparent" Padding="10,5">
-                                                        <Image x:Name="ExpanderImage" Width="20" Height="20" HorizontalAlignment="Right" Stretch="Uniform" Source="/DoingWell;Component/Images/Styles/expander_arrow_down.png"/>
+                                                        <Image x:Name="ExpanderImage" Width="20" Height="20" HorizontalAlignment="Right" Stretch="Uniform" Source="pack://application:,,,/Images/Styles/expander_arrow_down.png"/>
                                                     </Border>
 
                                                     <ControlTemplate.Triggers>
                                                         <Trigger Property="IsChecked" Value="True">
-                                                            <Setter TargetName="ExpanderImage" Property="Source" Value="/DoingWell;Component/Images/Styles/expander_arrow_up.png"/>
+                                                            <Setter TargetName="ExpanderImage" Property="Source" Value="pack://application:,,,/Images/Styles/expander_arrow_up.png"/>
                                                         </Trigger>
                                                         <Trigger Property="IsMouseOver" Value="True"/>
                                                         <MultiTrigger>
@@ -99,7 +99,7 @@
                                 <Condition Property="HasItems" Value="false"/>
                                 <Condition Property="IsSelected" Value="true"/>
                             </MultiTrigger.Conditions>
-                            <Setter TargetName="ItemIcon" Property="Source" Value="/DoingWell;Component/Images/Styles/treeviewitem_icon_selected.png"/>
+                            <Setter TargetName="ItemIcon" Property="Source" Value="pack://application:,,,/Images/Styles/treeviewitem_icon_selected.png"/>
                             <Setter Property="Foreground" Value="#da3610"/>
                             <Setter TargetName="Bd" Property="Background" Value="#fff"/>
                             <Setter TargetName="Bd" Property="BorderBrush" Value="#da3610"/>

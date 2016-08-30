@@ -30,7 +30,7 @@
                             <Button.Template>
                                 <ControlTemplate TargetType="{x:Type Button}">
                                     <Grid Cursor="Hand" Height="28" Width="30" Background="Transparent">
-                                        <Image Stretch="Uniform" Width="20" Height="20" Source="/DoingWell;Component/Images/Styles/datepicker_btn.png"/>
+                                        <Image Stretch="Uniform" Width="20" Height="20" Source="pack://application:,,,/Images/Styles/datepicker_btn.png"/>
                                     </Grid>
                                 </ControlTemplate>
                             </Button.Template>
