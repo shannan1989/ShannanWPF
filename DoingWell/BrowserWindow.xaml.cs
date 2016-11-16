@@ -25,7 +25,7 @@ namespace Shannan.DoingWell
             webControl.NativeViewInitialized += WebControl_NativeViewInitialized;
             webControl.WindowClose += WebControl_WindowClose;
             webControl.JavascriptMessage += WebControl_JavascriptMessage;
-        }  
+        }
 
         private void BrowserWindow_ContentRendered(object sender, EventArgs e)
         {
