@@ -68,12 +68,15 @@ namespace Shannan.DoingWell.Controls
         }
 
         #region dependency properties
+
         public bool IsActive
         {
             get { return (bool)GetValue(IsActiveProperty); }
             set { SetValue(IsActiveProperty, value); }
         }
+
         public static readonly DependencyProperty IsActiveProperty = DependencyProperty.Register("IsActive", typeof(bool), typeof(ProgressRing), new PropertyMetadata(true, IsActiveChanged));
+
         private static void IsActiveChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             ProgressRing ring = d as ProgressRing;
@@ -89,7 +92,9 @@ namespace Shannan.DoingWell.Controls
             get { return (bool)GetValue(IsLargeProperty); }
             set { SetValue(IsLargeProperty, value); }
         }
+
         public static readonly DependencyProperty IsLargeProperty = DependencyProperty.Register("IsLarge", typeof(bool), typeof(ProgressRing), new PropertyMetadata(true, IsLargeChanged));
+
         private static void IsLargeChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             ProgressRing ring = d as ProgressRing;
@@ -105,7 +110,9 @@ namespace Shannan.DoingWell.Controls
             get { return (double)GetValue(BindableWidthProperty); }
             private set { SetValue(BindableWidthProperty, value); }
         }
+
         public static readonly DependencyProperty BindableWidthProperty = DependencyProperty.Register("BindableWidth", typeof(double), typeof(ProgressRing), new PropertyMetadata(default(double), BindableWidthChanged));
+
         private static void BindableWidthChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             ProgressRing ring = d as ProgressRing;
@@ -135,6 +142,7 @@ namespace Shannan.DoingWell.Controls
             get { return (double)GetValue(MaxSideLengthProperty); }
             private set { SetValue(MaxSideLengthProperty, value); }
         }
+
         public static readonly DependencyProperty MaxSideLengthProperty = DependencyProperty.Register("MaxSideLength", typeof(double), typeof(ProgressRing), new PropertyMetadata(default(double)));
 
         public double EllipseDiameter
@@ -142,6 +150,7 @@ namespace Shannan.DoingWell.Controls
             get { return (double)GetValue(EllipseDiameterProperty); }
             private set { SetValue(EllipseDiameterProperty, value); }
         }
+
         public static readonly DependencyProperty EllipseDiameterProperty = DependencyProperty.Register("EllipseDiameter", typeof(double), typeof(ProgressRing), new PropertyMetadata(default(double)));
 
         public double EllipseDiameterScale
@@ -149,6 +158,7 @@ namespace Shannan.DoingWell.Controls
             get { return (double)GetValue(EllipseDiameterScaleProperty); }
             set { SetValue(EllipseDiameterScaleProperty, value); }
         }
+
         public static readonly DependencyProperty EllipseDiameterScaleProperty = DependencyProperty.Register("EllipseDiameterScale", typeof(double), typeof(ProgressRing), new PropertyMetadata(1D));
 
         public Thickness EllipseOffset
@@ -156,10 +166,13 @@ namespace Shannan.DoingWell.Controls
             get { return (Thickness)GetValue(EllipseOffsetProperty); }
             private set { SetValue(EllipseOffsetProperty, value); }
         }
+
         public static readonly DependencyProperty EllipseOffsetProperty = DependencyProperty.Register("EllipseOffset", typeof(Thickness), typeof(ProgressRing), new PropertyMetadata(default(Thickness)));
-        #endregion
+
+        #endregion dependency properties
 
         #region private methods
+
         private void UpdateActiveState()
         {
             Action action;
@@ -218,6 +231,7 @@ namespace Shannan.DoingWell.Controls
         {
             EllipseOffset = new Thickness(0, width / 2, 0, 0);
         }
-        #endregion
+
+        #endregion private methods
     }
 }
