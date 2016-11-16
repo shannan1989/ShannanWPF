@@ -8,10 +8,9 @@ using System.Windows.Shapes;
 
 namespace Shannan.DoingWell
 {
-
     public partial class AnimationWindow : Window
     {
-        Rectangle rect;
+        private Rectangle rect;
 
         public AnimationWindow()
         {
