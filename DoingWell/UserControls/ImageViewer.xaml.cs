@@ -22,7 +22,7 @@ namespace Shannan.DoingWell.UserControls
             Photo.MouseWheel += Photo_MouseWheel;
         }
 
-        Point dragPoint;
+        private Point dragPoint;
 
         private void Photo_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {

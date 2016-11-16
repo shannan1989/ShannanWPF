@@ -8,7 +8,9 @@ namespace Shannan.DoingWell.UserControls
     public partial class Pager : UserControl
     {
         #region Public Events
+
         public event EventHandler CurrentPageChanged;
+
         #endregion Public Events
 
         public Pager()
@@ -29,11 +31,13 @@ namespace Shannan.DoingWell.UserControls
         #region Public Properties
 
         #region Total
+
         public int Total
         {
             get { return (int)GetValue(TotalProperty); }
             set { SetValue(TotalProperty, value); }
         }
+
         public static readonly DependencyProperty TotalProperty =
             DependencyProperty.Register("Total", typeof(int), typeof(Pager), new PropertyMetadata(0, TotalChanged));
 
@@ -42,14 +46,17 @@ namespace Shannan.DoingWell.UserControls
             (d as Pager).CalPageCount();
             (d as Pager).RefreshLayout();
         }
+
         #endregion Total
 
         #region PageSize
+
         public int PageSize
         {
             get { return (int)GetValue(PageSizeProperty); }
             set { SetValue(PageSizeProperty, value); }
         }
+
         public static readonly DependencyProperty PageSizeProperty =
             DependencyProperty.Register("PageSize", typeof(int), typeof(Pager), new PropertyMetadata(0, PageSizeChanged));
 
@@ -58,14 +65,17 @@ namespace Shannan.DoingWell.UserControls
             (d as Pager).CalPageCount();
             (d as Pager).RefreshLayout();
         }
+
         #endregion PageSize
 
         #region PageCount
+
         public int PageCount
         {
             get { return (int)GetValue(PageCountProperty); }
             private set { SetValue(PageCountProperty, value); }
         }
+
         public static readonly DependencyProperty PageCountProperty =
             DependencyProperty.Register("PageCount", typeof(int), typeof(Pager), new PropertyMetadata(0, PageCountChanged));
 
@@ -73,19 +83,24 @@ namespace Shannan.DoingWell.UserControls
         {
             (d as Pager).CurrentPage = 1;
         }
+
         #endregion PageCount
 
         #region CurrentPage
+
         public int CurrentPage
         {
             get { return (int)GetValue(CurrentPageProperty); }
             set { SetValue(CurrentPageProperty, value); }
         }
+
         public static readonly DependencyProperty CurrentPageProperty =
             DependencyProperty.Register("CurrentPage", typeof(int), typeof(Pager), new PropertyMetadata(0));
+
         #endregion CurrentPage
 
         #region ShowNumber
+
         public int ShowNumber
         {
             get { return (int)GetValue(ShowNumberProperty); }
@@ -94,9 +109,11 @@ namespace Shannan.DoingWell.UserControls
 
         public static readonly DependencyProperty ShowNumberProperty =
             DependencyProperty.Register("ShowNumber", typeof(int), typeof(Pager), new PropertyMetadata(0));
+
         #endregion ShowNumber
 
         #region IsShowWhenEmpty
+
         public bool IsShowWhenEmpty
         {
             get { return (bool)GetValue(IsShowWhenEmptyProperty); }
@@ -105,6 +122,7 @@ namespace Shannan.DoingWell.UserControls
 
         public static readonly DependencyProperty IsShowWhenEmptyProperty =
             DependencyProperty.Register("IsShowWhenEmpty", typeof(bool), typeof(Pager), new PropertyMetadata(false));
+
         #endregion IsShowWhenEmpty
 
         #endregion Public Properties

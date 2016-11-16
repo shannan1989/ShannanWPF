@@ -38,12 +38,11 @@ namespace Shannan.DoingWell.UserControls
             displayImage.Source = rtb;
         }
 
-        Point startPoint;
-        List<Point> points = new List<Point>();
+        private Point startPoint;
+        private List<Point> points = new List<Point>();
 
-        Brush lineStroke = Brushes.Black;
-        DoubleCollection lineStrokeDashArray = new DoubleCollection(new List<double>() { });
-
+        private Brush lineStroke = Brushes.Black;
+        private DoubleCollection lineStrokeDashArray = new DoubleCollection(new List<double>() { });
 
         private void LineCanvas_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
@@ -119,6 +118,5 @@ namespace Shannan.DoingWell.UserControls
                 lineStrokeDashArray = new DoubleCollection(new List<double>() { 1, 1, 1, 1 });
             }
         }
-
     }
 }

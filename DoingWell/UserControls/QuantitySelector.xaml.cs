@@ -7,7 +7,9 @@ namespace Shannan.DoingWell.UserControls
     public partial class QuantitySelector : UserControl
     {
         #region Public Events
+
         public event EventHandler QuantityChanged;
+
         #endregion Public Events
 
         public QuantitySelector()
@@ -46,9 +48,10 @@ namespace Shannan.DoingWell.UserControls
             get { return (int)GetValue(QuantityProperty); }
             set { SetValue(QuantityProperty, value); }
         }
+
         public static readonly DependencyProperty QuantityProperty = DependencyProperty.Register("Quantity", typeof(int), typeof(QuantitySelector), new PropertyMetadata(0));
 
-        #endregion
+        #endregion Public Properties
 
         private void RefreshLayout()
         {
