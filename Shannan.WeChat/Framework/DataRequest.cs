@@ -14,6 +14,7 @@ namespace Shannan.WeChat.Framework
         protected string _uri;
         protected NameValueCollection _param;
         protected Stream _postStream;
+        protected string _postString;
 
         private HttpWebRequest _request;
         private HttpWebResponse _response;
@@ -51,6 +52,16 @@ namespace Shannan.WeChat.Framework
         public DataRequest(string uri, NameValueCollection param) : this(uri)
         {
             _param = param == null ? new NameValueCollection() : param;
+        }
+
+        public virtual void SetPostString(string postString)
+        {
+            if (Method != DataRequestMethod.POST)
+            {
+                throw new InvalidOperationException("请求方法为GET时无法设置POST串");
+            }
+
+            _postString = postString;
         }
 
         public virtual bool Start()
@@ -114,6 +125,8 @@ namespace Shannan.WeChat.Framework
             }
             request.Accept = "text/html, */*";
 
+            request.CookieContainer = Weixin.Instance.Cookies;
+
             request.UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36";
 
             request.AllowAutoRedirect = true;
@@ -135,6 +148,11 @@ namespace Shannan.WeChat.Framework
                         _postStream.CopyTo(ps);
                         _postStream.Close();
                         _postStream = null;
+                    }
+                    else if (_postString != null)
+                    {
+                        byte[] buffer = Encoding.UTF8.GetBytes(_postString);
+                        ps.Write(buffer, 0, buffer.Length);
                     }
                     else
                     {

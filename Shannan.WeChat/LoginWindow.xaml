@@ -6,7 +6,7 @@
         xmlns:uc="clr-namespace:Shannan.WeChat.UserControls"
         mc:Ignorable="d"
         ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Topmost="True"
-        Title="登录" Height="800" Width="600">
+        Icon="/Images/Wechat.ico" Title="登录" Height="800" Width="600">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -17,7 +17,7 @@
         <uc:ULoading />
         <Image x:Name="LoginQrcode" Width="200" />
         <Border Grid.Row="1">
-            <TextBlock x:Name="LoginHint" Grid.Row="1" FontSize="16" Foreground="#999" VerticalAlignment="Center" HorizontalAlignment="Center" Text="正在请求二维码，请稍候" />
+            <TextBlock x:Name="LoginHint" Grid.Row="1" FontSize="16" Foreground="#999" VerticalAlignment="Center" HorizontalAlignment="Center" />
         </Border>
 
         <Border Grid.Row="2">

@@ -6,7 +6,25 @@
         xmlns:uc="clr-namespace:Shannan.WeChat.UserControls"
         mc:Ignorable="d"
         ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
-        Title="微信客户端 By 山南" Height="800" Width="600">
+        Icon="/Images/Wechat.ico" Title="微信客户端 By 山南" Height="800" Width="1200">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <StackPanel Orientation="Horizontal">
+                <Image x:Name="MyAvatar" Height="60" Width="60" Stretch="None" />
+                <TextBlock x:Name="MyNickname" FontSize="16" Foreground="#999" Text="昵称" VerticalAlignment="Center" />
+            </StackPanel>
+        </Grid>
+
+        <Border Grid.Column="1"></Border>
     </Grid>
 </Window>
