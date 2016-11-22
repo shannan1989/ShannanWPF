@@ -3,7 +3,6 @@ using System.Windows;
 
 namespace Shannan.DoingWell
 {
-
     public partial class VideoWindow : SNWindow
     {
         public VideoWindow()

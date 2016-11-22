@@ -9,34 +9,34 @@
         d:DesignHeight="1080" d:DesignWidth="1920">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
         <Border Grid.Row="0" BorderThickness="3" Background="Black" Margin="10">
             <Border.BorderBrush>
                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
-                    <GradientStop Offset="0" Color="White"/>
-                    <GradientStop Offset="0.5" Color="Gold"/>
+                    <GradientStop Offset="0" Color="White" />
+                    <GradientStop Offset="0.5" Color="Gold" />
                 </LinearGradientBrush>
             </Border.BorderBrush>
-            <MediaElement x:Name="mediaElement"/>
+            <MediaElement x:Name="mediaElement" />
         </Border>
         <Border Grid.Row="1">
-            <Slider/>
+            <Slider />
         </Border>
         <Border Grid.Row="2">
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="auto"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <StackPanel Grid.Column="1" Orientation="Horizontal">
-                    <Button Content="播放"/>
-                    <Button Content="暂停"/>
+                    <Button Content="播放" />
+                    <Button Content="暂停" />
                 </StackPanel>
-                <Slider Grid.Column="2" Minimum="0" Maximum="1" Value="{Binding ElementName=mediaElement,Path=Volume,Mode=TwoWay}"/>
+                <Slider Grid.Column="2" Minimum="0" Maximum="1" Value="{Binding ElementName=mediaElement,Path=Volume,Mode=TwoWay}" />
             </Grid>
         </Border>
     </Grid>
