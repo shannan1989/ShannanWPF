@@ -2,24 +2,24 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="pack://application:,,,/Styles/Controls.TextBlock.xaml"/>
-        <ResourceDictionary Source="pack://application:,,,/Styles/Controls.TextBox.xaml"/>
-        <ResourceDictionary Source="pack://application:,,,/Styles/Controls.PasswordBox.xaml"/>
-        <ResourceDictionary Source="pack://application:,,,/Styles/Controls.ComboBox.xaml"/>
-        <ResourceDictionary Source="pack://application:,,,/Styles/Controls.CheckBox.xaml"/>
-        <ResourceDictionary Source="pack://application:,,,/Styles/Controls.RadioButton.xaml"/>
-        <ResourceDictionary Source="pack://application:,,,/Styles/Controls.Calendar.xaml"/>
-        <ResourceDictionary Source="pack://application:,,,/Styles/Controls.DatePicker.xaml"/>
-        <ResourceDictionary Source="pack://application:,,,/Styles/Controls.TreeView.xaml"/>
-        <ResourceDictionary Source="pack://application:,,,/Styles/Controls.ProgressBar.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/Styles/Controls.TextBlock.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Styles/Controls.TextBox.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Styles/Controls.PasswordBox.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Styles/Controls.ComboBox.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Styles/Controls.CheckBox.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Styles/Controls.RadioButton.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Styles/Controls.Calendar.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Styles/Controls.DatePicker.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Styles/Controls.TreeView.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Styles/Controls.ProgressBar.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Styles/Controls.TabControl.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource SNTextBox}"/>
-    <Style TargetType="{x:Type PasswordBox}" BasedOn="{StaticResource SNPasswordBox}"/>
-    <Style TargetType="{x:Type ComboBox}" BasedOn="{StaticResource SNComboBox}"/>
-    <Style TargetType="{x:Type CheckBox}" BasedOn="{StaticResource SNCheckBox}"/>
-    <Style TargetType="{x:Type RadioButton}" BasedOn="{StaticResource SNRadioButton}"/>
-    <Style TargetType="{x:Type Calendar}" BasedOn="{StaticResource SNCalendar}"/>
-    <Style TargetType="{x:Type DatePicker}" BasedOn="{StaticResource SNDatePicker}"/>
-
+    <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource SNTextBox}" />
+    <Style TargetType="{x:Type PasswordBox}" BasedOn="{StaticResource SNPasswordBox}" />
+    <Style TargetType="{x:Type ComboBox}" BasedOn="{StaticResource SNComboBox}" />
+    <Style TargetType="{x:Type CheckBox}" BasedOn="{StaticResource SNCheckBox}" />
+    <Style TargetType="{x:Type RadioButton}" BasedOn="{StaticResource SNRadioButton}" />
+    <Style TargetType="{x:Type Calendar}" BasedOn="{StaticResource SNCalendar}" />
+    <Style TargetType="{x:Type DatePicker}" BasedOn="{StaticResource SNDatePicker}" />
 </ResourceDictionary>

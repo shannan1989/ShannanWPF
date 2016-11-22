@@ -3,45 +3,44 @@
                     xmlns:controls="clr-namespace:Shannan.DoingWell.Controls">
 
     <Style x:Key="SNTextBox" TargetType="{x:Type TextBox}">
-        <Setter Property="MinHeight" Value="26"/>
-        <Setter Property="VerticalContentAlignment" Value="Center"/>
-        <Setter Property="FontSize" Value="{Binding FontSize,FallbackValue=14}"/>
-        <Setter Property="Foreground" Value="{Binding Foreground,FallbackValue='#333'}"/>
-        <Setter Property="CaretBrush" Value="{Binding CaretBrush}"/>
-        <Setter Property="SelectionBrush" Value="{Binding SelectionBrush}"/>
-        <Setter Property="Background" Value="{Binding Foreground,FallbackValue='Transparent'}"/>
-        <Setter Property="BorderBrush" Value="{Binding BorderBrush,FallbackValue='#ddd'}"/>
-        <Setter Property="BorderThickness" Value="{Binding BorderThickness,FallbackValue='0,0,0,1'}"/>
-        <Setter Property="controls:ControlsHelper.FocusBorderBrush" Value="{Binding controls:ControlsHelper.FocusBorderBrush,FallbackValue='#da3610'}"/>
-        <Setter Property="controls:ControlsHelper.MouseOverBorderBrush" Value="{Binding controls:ControlsHelper.MouseOverBorderBrush,FallbackValue='#da3610'}"/>
-        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Setter Property="MinHeight" Value="26" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="FontSize" Value="{Binding FontSize,FallbackValue=14}" />
+        <Setter Property="Foreground" Value="{Binding Foreground,FallbackValue='#333'}" />
+        <Setter Property="CaretBrush" Value="{Binding CaretBrush}" />
+        <Setter Property="SelectionBrush" Value="{Binding SelectionBrush}" />
+        <Setter Property="Background" Value="{Binding Foreground,FallbackValue='Transparent'}" />
+        <Setter Property="BorderBrush" Value="{Binding BorderBrush,FallbackValue='#ddd'}" />
+        <Setter Property="BorderThickness" Value="{Binding BorderThickness,FallbackValue='0,0,0,1'}" />
+        <Setter Property="controls:ControlsHelper.FocusBorderBrush" Value="{Binding controls:ControlsHelper.FocusBorderBrush,FallbackValue='#da3610'}" />
+        <Setter Property="controls:ControlsHelper.MouseOverBorderBrush" Value="{Binding controls:ControlsHelper.MouseOverBorderBrush,FallbackValue='#da3610'}" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TextBox}">
                     <Border x:Name="border" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="{TemplateBinding controls:ControlsHelper.CornerRadius}">
                         <Grid>
-                            <ScrollViewer x:Name="PART_ContentHost" Focusable="False" IsTabStop="False" Margin="2" BorderThickness="0" Background="{x:Null}" VerticalAlignment="Stretch" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
-                            <TextBlock x:Name="PART_Watermark" Visibility="Collapsed" IsHitTestVisible="False" Opacity="0.6" Margin="3,2" Padding="{TemplateBinding Padding}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Foreground="{TemplateBinding Foreground}" Text="{TemplateBinding controls:TextBoxHelper.Watermark}"/>
+                            <ScrollViewer x:Name="PART_ContentHost" Focusable="False" IsTabStop="False" Margin="2" BorderThickness="0" Background="{x:Null}" VerticalAlignment="Stretch" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" />
+                            <TextBlock x:Name="PART_Watermark" Visibility="Collapsed" IsHitTestVisible="False" Opacity="0.6" Margin="3,2" Padding="{TemplateBinding Padding}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Foreground="{TemplateBinding Foreground}" Text="{TemplateBinding controls:TextBoxHelper.Watermark}" />
                         </Grid>
                     </Border>
 
                     <ControlTemplate.Triggers>
                         <DataTrigger Binding="{Binding Path=Text,RelativeSource={RelativeSource Self}}" Value="">
-                            <Setter TargetName="PART_Watermark" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="PART_Watermark" Property="Visibility" Value="Visible" />
                         </DataTrigger>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="border" Property="BorderBrush" Value="{Binding Path=(controls:ControlsHelper.MouseOverBorderBrush),RelativeSource={RelativeSource TemplatedParent}}"/>
+                            <Setter TargetName="border" Property="BorderBrush" Value="{Binding Path=(controls:ControlsHelper.MouseOverBorderBrush),RelativeSource={RelativeSource TemplatedParent}}" />
                         </Trigger>
                         <Trigger Property="IsFocused" Value="True">
-                            <Setter TargetName="border" Property="BorderBrush" Value="{Binding Path=(controls:ControlsHelper.FocusBorderBrush),RelativeSource={RelativeSource TemplatedParent}}"/>
+                            <Setter TargetName="border" Property="BorderBrush" Value="{Binding Path=(controls:ControlsHelper.FocusBorderBrush),RelativeSource={RelativeSource TemplatedParent}}" />
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="False">
-                            <Setter TargetName="border" Property="Opacity" Value="0.56"/>
+                            <Setter TargetName="border" Property="Opacity" Value="0.56" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
-
 </ResourceDictionary>
