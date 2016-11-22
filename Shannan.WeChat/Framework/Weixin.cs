@@ -24,6 +24,12 @@ namespace Shannan.WeChat.Framework
             private set;
         }
 
+        public string Host
+        {
+            get;
+            set;
+        }
+
         public CookieContainer Cookies
         {
             get;
