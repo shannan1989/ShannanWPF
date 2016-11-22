@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Net;
 using System.Xml;
@@ -11,6 +12,7 @@ namespace Shannan.WeChat.Framework
         private Weixin()
         {
             Cookies = new CookieContainer();
+            Contact = new ConcurrentDictionary<string, JObject>();
         }
 
         static Weixin()
@@ -22,6 +24,12 @@ namespace Shannan.WeChat.Framework
         {
             get;
             private set;
+        }
+
+        public ConcurrentDictionary<string, JObject> Contact
+        {
+            get;
+            set;
         }
 
         public string Host
