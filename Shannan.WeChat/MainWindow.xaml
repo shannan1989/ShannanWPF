@@ -16,15 +16,49 @@
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
             <StackPanel Orientation="Horizontal">
                 <Image x:Name="MyAvatar" Height="60" Width="60" Stretch="None" />
-                <TextBlock x:Name="MyNickname" FontSize="16" Foreground="#999" Text="昵称" VerticalAlignment="Center" />
+                <TextBlock x:Name="MyNickname" FontSize="16" Foreground="#999" Text="" VerticalAlignment="Center" />
             </StackPanel>
-        </Grid>
 
-        <Border Grid.Column="1"></Border>
+            <StackPanel Grid.Row="1">
+                <TextBlock x:Name="MemberCount" />
+            </StackPanel>
+
+            <ScrollViewer Grid.Row="2">
+                <StackPanel>
+                    <ItemsControl x:Name="MemberList">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Border BorderThickness="0,0,0,1" BorderBrush="#312f2f" Padding="5">
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding NickName}" />
+                                    </StackPanel>
+                                </Border>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+        <Border Grid.Column="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="聊天纪录" />
+
+                <ScrollViewer Grid.Row="2">
+                    <StackPanel x:Name="MsgList">
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+        </Border>
     </Grid>
 </Window>
