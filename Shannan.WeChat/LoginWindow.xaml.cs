@@ -122,6 +122,11 @@ namespace Shannan.WeChat
                         _tip = -1;
                         LoginHint.Text = "登录成功";
 
+                        thread.Abort();
+
+                        Uri uri = new Uri(values["window.redirect_uri"].ToString());
+                        Weixin.Instance.Host = uri.Host;
+
                         GetLoginParams(values["window.redirect_uri"].ToString());
                     }
                     else if (values["window.code"].ToString() == "201")
