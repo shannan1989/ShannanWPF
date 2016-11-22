@@ -9,7 +9,6 @@ using System.Windows.Media.Imaging;
 
 namespace Shannan.DoingWell
 {
-
     public partial class DrawingWindow : SNWindow
     {
         public DrawingWindow()
@@ -70,6 +69,5 @@ namespace Shannan.DoingWell
             }
             drawCanvas.DefaultDrawingAttributes.Color = ((sender as ListBox).SelectedValue as SolidColorBrush).Color;
         }
-
     }
 }
