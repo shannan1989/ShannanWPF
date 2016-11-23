@@ -12,7 +12,7 @@ namespace Shannan.WeChat.Framework
         private Weixin()
         {
             Cookies = new CookieContainer();
-            Contact = new ConcurrentDictionary<string, JObject>();
+            Contact = new ConcurrentDictionary<string, WeixinMember>();
         }
 
         static Weixin()
@@ -20,29 +20,15 @@ namespace Shannan.WeChat.Framework
             Instance = new Weixin();
         }
 
-        public static Weixin Instance
-        {
-            get;
-            private set;
-        }
+        public static Weixin Instance { get; private set; }
 
-        public ConcurrentDictionary<string, JObject> Contact
-        {
-            get;
-            set;
-        }
+        public WeixinMember CurrentUser { get; set; }
 
-        public string Host
-        {
-            get;
-            set;
-        }
+        public ConcurrentDictionary<string, WeixinMember> Contact { get; set; }
 
-        public CookieContainer Cookies
-        {
-            get;
-            private set;
-        }
+        public string Host { get; set; }
+
+        public CookieContainer Cookies { get; private set; }
 
         public string AppId
         {
@@ -52,47 +38,19 @@ namespace Shannan.WeChat.Framework
             }
         }
 
-        public string Uuid
-        {
-            get;
-            set;
-        }
+        public string Uuid { get; set; }
 
-        public string Uin
-        {
-            get;
-            set;
-        }
+        public string Uin { get; set; }
 
-        public string Skey
-        {
-            get;
-            set;
-        }
+        public string Skey { get; set; }
 
-        public string Sid
-        {
-            get;
-            set;
-        }
+        public string Sid { get; set; }
 
-        public string PassTicket
-        {
-            get;
-            set;
-        }
+        public string PassTicket { get; set; }
 
-        public string DeviceId
-        {
-            get;
-            set;
-        }
+        public string DeviceId { get; set; }
 
-        public JObject SyncKey
-        {
-            get;
-            set;
-        }
+        public JObject SyncKey { get; set; }
 
         public string FormatSyncKey()
         {
