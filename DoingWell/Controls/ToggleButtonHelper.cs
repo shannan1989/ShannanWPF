@@ -4,9 +4,8 @@ using System.Windows.Controls.Primitives;
 
 namespace Shannan.DoingWell.Controls
 {
-    class ToggleButtonHelper : DependencyObject
+    internal class ToggleButtonHelper : DependencyObject
     {
-
         public static FlowDirection GetContentDirection(DependencyObject obj)
         {
             return (FlowDirection)obj.GetValue(ContentDirectionProperty);
@@ -28,6 +27,5 @@ namespace Shannan.DoingWell.Controls
                 throw new InvalidOperationException("The property 'ContentDirection' may only be set on ToggleButton elements.");
             }
         }
-
     }
 }

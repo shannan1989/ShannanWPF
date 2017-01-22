@@ -2,7 +2,7 @@
 
 namespace Shannan.DoingWell.Controls
 {
-    class TextBoxHelper : DependencyObject
+    internal class TextBoxHelper : DependencyObject
     {
         public static string GetWatermark(DependencyObject obj)
         {
@@ -16,6 +16,5 @@ namespace Shannan.DoingWell.Controls
 
         public static readonly DependencyProperty WatermarkProperty =
             DependencyProperty.RegisterAttached("Watermark", typeof(string), typeof(TextBoxHelper), new UIPropertyMetadata(string.Empty));
-
     }
 }

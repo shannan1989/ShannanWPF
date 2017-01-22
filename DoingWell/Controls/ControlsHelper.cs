@@ -3,7 +3,7 @@ using System.Windows.Media;
 
 namespace Shannan.DoingWell.Controls
 {
-    class ControlsHelper : DependencyObject
+    internal class ControlsHelper : DependencyObject
     {
         public static Brush GetFocusBorderBrush(DependencyObject obj)
         {
@@ -43,6 +43,5 @@ namespace Shannan.DoingWell.Controls
 
         public static readonly DependencyProperty CornerRadiusProperty =
             DependencyProperty.RegisterAttached("CornerRadius", typeof(CornerRadius), typeof(ControlsHelper), new FrameworkPropertyMetadata(new CornerRadius(), FrameworkPropertyMetadataOptions.AffectsMeasure | FrameworkPropertyMetadataOptions.AffectsRender));
-
     }
 }
