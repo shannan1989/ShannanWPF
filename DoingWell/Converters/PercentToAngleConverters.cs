@@ -4,7 +4,7 @@ using System.Windows.Data;
 
 namespace Shannan.DoingWell.Converters
 {
-    class PercentToAngleConverters : IMultiValueConverter
+    internal class PercentToAngleConverters : IMultiValueConverter
     {
         public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
         {
