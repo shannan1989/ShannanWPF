@@ -3,7 +3,7 @@ using System.Text;
 
 namespace Shannan.DoingWell.Tools
 {
-    class PinyinConverter
+    internal class PinyinConverter
     {
         #region 一级汉字及对应拼音
 
@@ -96,7 +96,6 @@ namespace Shannan.DoingWell.Tools
             -10544, -10533, -10519, -10331, -10329, -10328, -10322, -10315, -10309,
 
             -10307, -10296, -10281, -10274, -10270, -10262, -10260, -10256, -10254
-
         };
 
         private static string[] firstLevelChPinyin = new string[]
@@ -183,9 +182,10 @@ namespace Shannan.DoingWell.Tools
              "Zui", "Zun", "Zuo"
          };
 
-        #endregion
+        #endregion 一级汉字及对应拼音
 
         #region 二级汉字及对应拼音
+
         private static string[] otherChinese = new string[]
         {
             "亍","丌","兀","丐","廿","卅","丕","亘","丞","鬲","孬","噩","丨","禺","丿"
@@ -573,41 +573,46 @@ namespace Shannan.DoingWell.Tools
                 "Huan","Lie","Me","Hui","Mi","Ji","Jun","Zhu","Mi","Qi","Ao","She","Lin","Dai","Chu","You",
                 "Xia","Yi","Qu","Du","Li","Qing","Can","An","Fen","You","Wu","Yan","Xi","Qiu","Han","Zha"
            };
-        #endregion
+
+        #endregion 二级汉字及对应拼音
 
         #region 变量定义
+
         // GB2312-80 标准规范中第一个汉字的机内码.即"啊"的机内码
         private const int firstChCode = -20319;
+
         // GB2312-80 标准规范中最后一个汉字的机内码.即"齄"的机内码
         private const int lastChCode = -2050;
+
         // GB2312-80 标准规范中最后一个一级汉字的机内码.即"座"的机内码
         private const int lastOfFirstLevelChCode = -10247;
+
         // 配置中文字符
         //static Regex regex = new Regex("[\u4e00-\u9fa5]$");
-        #endregion
 
+        #endregion 变量定义
 
         public static string getPinyin(char ch)
         {
-            // 拉丁字符            
+            // 拉丁字符
             if (ch <= '\x00FF')
                 return ch.ToString();
 
-            // 标点符号、分隔符            
+            // 标点符号、分隔符
             if (Char.IsPunctuation(ch) || Char.IsSeparator(ch))
                 return ch.ToString();
 
-            // 非中文字符            
+            // 非中文字符
             if (ch < '\x4E00' || ch > '\x9FA5')
                 return ch.ToString();
 
             //Encoding.Default默认在中文环境里虽是GB2312，但在多变的环境可能是其它
-            //var arr = Encoding.Default.GetBytes(ch.ToString()); 
+            //var arr = Encoding.Default.GetBytes(ch.ToString());
             var arr = Encoding.GetEncoding("gb2312").GetBytes(ch.ToString());
 
             var chr = (Int16)arr[0] * 256 + (Int16)arr[1] - 65536;
 
-            // 单字符--英文或半角字符  
+            // 单字符--英文或半角字符
             if (chr > 0 && chr < 160)
             {
                 return ch.ToString();
@@ -652,7 +657,8 @@ namespace Shannan.DoingWell.Tools
                     return otherPinYin[pos];
                 }
             }
-            #endregion
+
+            #endregion 中文字符处理
 
             return String.Empty;
         }
@@ -698,6 +704,5 @@ namespace Shannan.DoingWell.Tools
 
             return sb.ToString();
         }
-
     }
 }

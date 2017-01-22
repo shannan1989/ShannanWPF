@@ -5,7 +5,7 @@ using System.Windows.Media;
 
 namespace Shannan.DoingWell.Tools
 {
-    class VTHelper
+    internal class VTHelper
     {
         /// <summary>
         /// 查找某种类型的子控件，并返回一个List集合
@@ -29,6 +29,5 @@ namespace Shannan.DoingWell.Tools
             }
             return childList;
         }
-
     }
 }

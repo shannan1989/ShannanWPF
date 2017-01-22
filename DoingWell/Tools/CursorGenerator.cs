@@ -5,7 +5,7 @@ using System.Windows.Input;
 
 namespace Shannan.DoingWell.Tools
 {
-    class CursorGenerator
+    internal class CursorGenerator
     {
         public static Cursor Create(Uri uri, byte hotspotx, byte hotspoty)
         {
@@ -41,6 +41,5 @@ namespace Shannan.DoingWell.Tools
 
             return new Cursor(ms);
         }
-
     }
 }
