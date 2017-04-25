@@ -13,6 +13,7 @@
         <ResourceDictionary Source="pack://application:,,,/Styles/Controls.TreeView.xaml" />
         <ResourceDictionary Source="pack://application:,,,/Styles/Controls.ProgressBar.xaml" />
         <ResourceDictionary Source="pack://application:,,,/Styles/Controls.TabControl.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Styles/Controls.Slider.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource SNTextBox}" />
