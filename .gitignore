@@ -11,8 +11,6 @@
 *.user
 *.sln.docstates
 
-*.csproj
-
 # Build results
 
 [Dd]ebug/
