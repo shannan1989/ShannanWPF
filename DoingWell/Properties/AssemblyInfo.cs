@@ -11,7 +11,7 @@ using System.Windows;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("山南小站")]
 [assembly: AssemblyProduct("DoingWell")]
-[assembly: AssemblyCopyright("Copyright © 山南 2016")]
+[assembly: AssemblyCopyright("Copyright © 山南 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
