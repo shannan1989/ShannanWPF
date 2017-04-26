@@ -22,5 +22,23 @@ namespace Shannan.DoingWell.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://www.shannanshuibei.net")]
+        public string Host {
+            get {
+                return ((string)(this["Host"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("/api/film")]
+        public string ServicePath {
+            get {
+                return ((string)(this["ServicePath"]));
+            }
+        }
     }
 }
