@@ -7,7 +7,6 @@ namespace Shannan.StrawMan
         public SNDialog()
         {
             ShowInTaskbar = false;
-            AllowsTransparency = true;
 
             PreviewMouseDoubleClick += (sender, e) =>
             {
