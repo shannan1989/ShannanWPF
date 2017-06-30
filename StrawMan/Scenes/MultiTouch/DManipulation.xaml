@@ -1,0 +1,18 @@
+﻿<self:SNDialog x:Class="Shannan.StrawMan.DManipulation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:self="clr-namespace:Shannan.StrawMan"
+        mc:Ignorable="d"
+        Title="触控高级操作" d:DesignHeight="1080" d:DesignWidth="1920">
+    <Grid>
+        <Canvas x:Name="touchPad" Background="Gray">
+            <TextBlock Text="请在触摸屏上进行测试，拖动文字" FontSize="40" Foreground="Blue" Canvas.Top="50" Canvas.Left="50" IsManipulationEnabled="True">
+                <TextBlock.RenderTransform>
+                    <MatrixTransform />
+                </TextBlock.RenderTransform>
+            </TextBlock>
+        </Canvas>
+    </Grid>
+</self:SNDialog>
