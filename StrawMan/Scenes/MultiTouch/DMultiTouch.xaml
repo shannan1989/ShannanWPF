@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:self="clr-namespace:Shannan.StrawMan"
         mc:Ignorable="d"
-        Title="多点触控" d:DesignHeight="1080" d:DesignWidth="1920">
+        Title="多点触控基本操作" d:DesignHeight="1080" d:DesignWidth="1920">
     <Grid>
-        <Canvas x:Name="touchPad" Background="Gray" />
+        <Canvas x:Name="touchPad" Background="Gray">
+            <TextBlock Text="请在触摸屏上进行测试" FontSize="40" Foreground="Blue" Canvas.Top="50" Canvas.Left="50" />
+        </Canvas>
     </Grid>
 </self:SNDialog>
