@@ -36,6 +36,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Expression.Drawing, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -62,17 +63,114 @@
     </ApplicationDefinition>
     <Compile Include="Classes\SNWindow.cs" />
     <Compile Include="Classes\SNDialog.cs" />
-    <Page Include="Scenes\Home\HomeWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Compile Include="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
+    <Compile Include="Scenes\Controls\DStyles.xaml.cs">
+      <DependentUpon>DStyles.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scenes\Controls\DUserControls.xaml.cs">
+      <DependentUpon>DUserControls.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Scenes\Home\HomeWindow.xaml.cs">
       <DependentUpon>HomeWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Scenes\MultiTouch\DManipulation.xaml.cs">
+      <DependentUpon>DManipulation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scenes\MultiTouch\DMultiTouch.xaml.cs">
+      <DependentUpon>DMultiTouch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scenes\System\DInstalledSoftware.xaml.cs">
+      <DependentUpon>DInstalledSoftware.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scenes\System\DSystemInfo.xaml.cs">
+      <DependentUpon>DSystemInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Pager.xaml.cs">
+      <DependentUpon>Pager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\QuantitySelector.xaml.cs">
+      <DependentUpon>QuantitySelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\ControlsHelper.cs" />
+    <Compile Include="Controls\TextBoxHelper.cs" />
+    <Compile Include="Controls\ToggleButtonHelper.cs" />
+    <Compile Include="Converters\PercentToAngleConverter.cs" />
+    <Page Include="Scenes\Controls\DStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenes\Controls\DUserControls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenes\Home\HomeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenes\MultiTouch\DManipulation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenes\MultiTouch\DMultiTouch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenes\System\DInstalledSoftware.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenes\System\DSystemInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Controls.Calendar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Controls.CheckBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Controls.ComboBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Controls.DatePicker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Controls.PasswordBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Controls.ProgressBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Controls.RadioButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Controls.TextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Controls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Pager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\QuantitySelector.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -102,7 +200,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Styles\Images\checkbox_checked.png" />
+    <Resource Include="Styles\Images\checkbox_unchecked.png" />
+    <Resource Include="Styles\Images\combobox_btn.png" />
+    <Resource Include="Styles\Images\datepicker_btn.png" />
+    <Resource Include="UserControls\Images\decrement_disabled.png" />
+    <Resource Include="UserControls\Images\decrement_enabled.png" />
+    <Resource Include="UserControls\Images\increment_disabled.png" />
+    <Resource Include="UserControls\Images\increment_enabled.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
