@@ -9,6 +9,7 @@
         <ResourceDictionary Source="pack://application:,,,/Styles/Controls.RadioButton.xaml" />
         <ResourceDictionary Source="pack://application:,,,/Styles/Controls.Calendar.xaml" />
         <ResourceDictionary Source="pack://application:,,,/Styles/Controls.DatePicker.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Styles/Controls.ProgressBar.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource SNTextBox}" />
