@@ -7,5 +7,18 @@
         mc:Ignorable="d"
         Title="Straw Man" d:DesignHeight="1080" d:DesignWidth="1920">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <WrapPanel Grid.Row="0" Margin="5">
+            <Label Content="导航>" />
+            <Button Content="系统信息" Margin="5,0" Padding="5" Tag="SystemInfo" Click="NavigationButton_Click" />
+            <Button Content="已安装软件" Margin="5,0" Padding="5" Tag="InstalledSoftware" Click="NavigationButton_Click" />
+            <Button Content="多点触控基本操作" Margin="5,0" Padding="5" Tag="MultiTouch" Click="NavigationButton_Click" />
+            <Button Content="多点触控高级操作" Margin="5,0" Padding="5" Tag="Manipulation" Click="NavigationButton_Click" />
+            <Button Content="自定义样式" Margin="5,0" Padding="5" Tag="Styles" Click="NavigationButton_Click" />
+            <Button Content="用户控件" Margin="5,0" Padding="5" Tag="UserControls" Click="NavigationButton_Click" />
+        </WrapPanel>
     </Grid>
 </self:SNWindow>
