@@ -4,8 +4,10 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="pack://application:,,,/Styles/Controls.TextBox.xaml" />
         <ResourceDictionary Source="pack://application:,,,/Styles/Controls.PasswordBox.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Styles/Controls.ComboBox.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource SNTextBox}" />
     <Style TargetType="{x:Type PasswordBox}" BasedOn="{StaticResource SNPasswordBox}" />
+    <Style TargetType="{x:Type ComboBox}" BasedOn="{StaticResource SNComboBox}" />
 </ResourceDictionary>
