@@ -37,12 +37,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Expression.Drawing, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -64,6 +66,28 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scenes\Controls\DStyles.xaml.cs">
+      <DependentUpon>DStyles.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scenes\Controls\DUserControls.xaml.cs">
+      <DependentUpon>DUserControls.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scenes\Home\HomeWindow.xaml.cs">
+      <DependentUpon>HomeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scenes\MultiTouch\DManipulation.xaml.cs">
+      <DependentUpon>DManipulation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scenes\MultiTouch\DMultiTouch.xaml.cs">
+      <DependentUpon>DMultiTouch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scenes\System\DInstalledSoftware.xaml.cs">
+      <DependentUpon>DInstalledSoftware.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scenes\System\DSystemInfo.xaml.cs">
+      <DependentUpon>DSystemInfo.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Pager.xaml.cs">
       <DependentUpon>Pager.xaml</DependentUpon>
@@ -109,6 +133,34 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Scenes\Controls\DStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenes\Controls\DUserControls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenes\Home\HomeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenes\MultiTouch\DManipulation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenes\MultiTouch\DMultiTouch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenes\System\DInstalledSoftware.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scenes\System\DSystemInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Styles\Controls.Calendar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
