@@ -19,6 +19,7 @@ namespace Shannan.StrawMan
                 touchPad.ManipulationStarting += TouchPad_ManipulationStarting;
                 touchPad.ManipulationDelta += TouchPad_ManipulationDelta;
                 touchPad.ManipulationCompleted += TouchPad_ManipulationCompleted;
+                touchPad.ManipulationInertiaStarting += TouchPad_ManipulationInertiaStarting;
             };
         }
 
@@ -59,6 +60,25 @@ namespace Shannan.StrawMan
             //当手指离开触摸屏即操作结束，ManipulationCompleted 事件触发，将控件透明度重新调整为1
             FrameworkElement element = e.Source as FrameworkElement;
             element.Opacity = 1;
+        }
+
+        private void TouchPad_ManipulationInertiaStarting(object sender, ManipulationInertiaStartingEventArgs e)
+        {
+            //移动过程中如果将手指移开屏幕则控件会立刻停止，根据这种情况 WPF 提供另外一种惯性效果（Inertia）。
+            //通过它可以使UI 单元移动的更加符合物理特性、更为实际和流畅
+            //如下代码分别对TranslationBehavior、ExpansionBehavior、RotationBehavior 进行设置，使其具备惯性特征。
+
+            e.TranslationBehavior = new InertiaTranslationBehavior();
+            e.TranslationBehavior.InitialVelocity = e.InitialVelocities.LinearVelocity;
+            e.TranslationBehavior.DesiredDeceleration = 10.0 * 96.0 / (1000.0 * 1000.0);
+
+            e.ExpansionBehavior = new InertiaExpansionBehavior();
+            e.ExpansionBehavior.InitialVelocity = e.InitialVelocities.ExpansionVelocity;
+            e.ExpansionBehavior.DesiredDeceleration = 0.1 * 96 / 1000.0 * 1000.0;
+
+            e.RotationBehavior = new InertiaRotationBehavior();
+            e.RotationBehavior.InitialVelocity = e.InitialVelocities.AngularVelocity;
+            e.RotationBehavior.DesiredDeceleration = 720 / (1000.0 * 1000.0);
         }
     }
 }
