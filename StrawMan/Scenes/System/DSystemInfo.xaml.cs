@@ -11,6 +11,8 @@ namespace Shannan.StrawMan
         {
             InitializeComponent();
 
+            Width = SystemParameters.WorkArea.Width * 0.9;
+            Height = SystemParameters.WorkArea.Height * 0.9;
             WindowStartupLocation = WindowStartupLocation.CenterOwner;
 
             Loaded += delegate

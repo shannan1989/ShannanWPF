@@ -14,6 +14,8 @@ namespace Shannan.StrawMan
         {
             InitializeComponent();
 
+            Width = SystemParameters.WorkArea.Width * 0.9;
+            Height = SystemParameters.WorkArea.Height * 0.9;
             WindowStartupLocation = WindowStartupLocation.CenterOwner;
 
             Loaded += delegate
@@ -33,8 +35,8 @@ namespace Shannan.StrawMan
             //使用Ellipse创建随机颜色的圆圈，通过GetTouchPoint方法获取触碰位置点，并调整圆圈在<Canvas>中的位置。
             //为了跟踪手指移动轨迹，需要将触屏设备ID及UI控件存储在集合movingEllipses 中。
             Ellipse ellipse = new Ellipse();
-            ellipse.Width = 30;
-            ellipse.Height = 30;
+            ellipse.Width = 60;
+            ellipse.Height = 60;
             ellipse.Stroke = Brushes.White;
             ellipse.Fill = new SolidColorBrush(Color.FromRgb((byte)rd.Next(0, 255), (byte)rd.Next(0, 255), (byte)rd.Next(0, 255)));
 

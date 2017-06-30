@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:self="clr-namespace:Shannan.StrawMan"
         mc:Ignorable="d"
-        Title="系统信息" Height="900" Width="1600">
+        Title="系统信息" d:DesignHeight="1080" d:DesignWidth="1920">
     <Grid>
         <ScrollViewer Padding="5">
             <TextBlock x:Name="SystemInfo" />
