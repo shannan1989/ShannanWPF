@@ -40,7 +40,7 @@ namespace Shannan.StrawMan
             HomeWindow window = new HomeWindow();
             window.Show();
 
-            //base.OnStartup(e);
+            base.OnStartup(e);
         }
     }
 }
