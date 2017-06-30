@@ -1,0 +1,22 @@
+﻿<self:SNDialog x:Class="Shannan.StrawMan.DUserControls"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:self="clr-namespace:Shannan.StrawMan"
+        xmlns:uc="clr-namespace:Shannan.StrawMan.UserControls"
+        mc:Ignorable="d"
+        Title="用户控件" d:DesignHeight="1080" d:DesignWidth="1920">
+    <Grid>
+        <ScrollViewer>
+            <StackPanel>
+                <Border Padding="20">
+                    <uc:Pager x:Name="pager" Total="500" ShowNumber="5" PageSize="50" />
+                </Border>
+                <Border Padding="20">
+                    <uc:QuantitySelector x:Name="quantitySelector" Height="30" Width="200" />
+                </Border>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</self:SNDialog>
