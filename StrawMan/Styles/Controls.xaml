@@ -3,7 +3,9 @@
 
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="pack://application:,,,/Styles/Controls.TextBox.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Styles/Controls.PasswordBox.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource SNTextBox}" />
+    <Style TargetType="{x:Type PasswordBox}" BasedOn="{StaticResource SNPasswordBox}" />
 </ResourceDictionary>
