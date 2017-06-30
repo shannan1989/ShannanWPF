@@ -71,7 +71,7 @@
                 </ItemsControl.ItemsPanel>
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <Button Content="{Binding Number}" Tag="{Binding Number}" Style="{Binding Style}"  Margin="3,0" Click="NumberButton_Click" />
+                        <Button Content="{Binding Number}" Tag="{Binding Number}" Style="{Binding Style}" Margin="3,0" Click="NumberButton_Click" />
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
