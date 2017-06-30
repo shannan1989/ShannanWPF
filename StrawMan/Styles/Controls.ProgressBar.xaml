@@ -4,7 +4,7 @@
                     xmlns:converters="clr-namespace:Shannan.StrawMan.Converters">
 
     <converters:PercentToAngleConverter x:Key="percentToAngleConverter" />
-    
+
     <Style x:Key="SNCircleProgressBar" TargetType="{x:Type ProgressBar}">
         <Setter Property="Width" Value="100" />
         <Setter Property="Height" Value="100" />
