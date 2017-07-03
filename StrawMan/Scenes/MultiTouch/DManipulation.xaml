@@ -3,15 +3,30 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
         xmlns:self="clr-namespace:Shannan.StrawMan"
         mc:Ignorable="d"
         Title="触控高级操作" d:DesignHeight="1080" d:DesignWidth="1920">
     <Grid>
         <Canvas x:Name="touchPad" Background="Gray">
-            <TextBlock Text="请在触摸屏上进行测试，拖动文字" FontSize="40" Foreground="Blue" Canvas.Top="50" Canvas.Left="50" IsManipulationEnabled="True">
+            <TextBlock Text="请在触摸屏上进行测试，拖动文字（代码实现）" FontSize="40" Foreground="Blue" Canvas.Top="50" Canvas.Left="50" IsManipulationEnabled="True">
                 <TextBlock.RenderTransform>
                     <MatrixTransform />
                 </TextBlock.RenderTransform>
+            </TextBlock>
+            <TextBlock Text="请在触摸屏上进行测试，拖动文字（XAML实现）" FontSize="40" Foreground="Red" Canvas.Top="250" Canvas.Left="50">
+                 <i:Interaction.Behaviors>
+                    <ei:TranslateZoomRotateBehavior ConstrainToParentBounds="True" />
+                    <ei:FluidMoveBehavior Duration="0:0:2">
+                        <ei:FluidMoveBehavior.EaseY>
+                            <BackEase EasingMode="EaseOut" />
+                        </ei:FluidMoveBehavior.EaseY>
+                        <ei:FluidMoveBehavior.EaseX>
+                            <BackEase EasingMode="EaseOut" />
+                        </ei:FluidMoveBehavior.EaseX>
+                    </ei:FluidMoveBehavior>
+                </i:Interaction.Behaviors>
             </TextBlock>
         </Canvas>
     </Grid>
