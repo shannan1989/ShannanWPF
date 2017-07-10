@@ -4,7 +4,7 @@ using System.Windows.Data;
 
 namespace Shannan.StrawMan.Converters
 {
-    internal class PercentToAngleConverter : IMultiValueConverter
+    internal sealed class PercentToAngleConverter : IMultiValueConverter
     {
         public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
         {
