@@ -3,6 +3,9 @@
                     xmlns:controls="clr-namespace:Shannan.StrawMan.Controls">
 
     <Style x:Key="SNCheckBox" TargetType="{x:Type CheckBox}">
+        <Setter Property="Foreground" Value="#333" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="Cursor" Value="Hand" />
         <Setter Property="VerticalAlignment" Value="Center" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="Template">
@@ -18,7 +21,6 @@
                         </Grid>
                         <ContentPresenter x:Name="contentPresenter" Grid.Column="1" Focusable="False" RecognizesAccessKey="True" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
                     </Grid>
-
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsChecked" Value="true">
                             <Setter TargetName="CheckIcon" Property="Source" Value="pack://application:,,,/Styles/Images/checkbox_checked.png" />
@@ -27,7 +29,9 @@
                             <Setter TargetName="CheckIcon" Property="Source" Value="pack://application:,,,/Styles/Images/checkbox_unchecked.png" />
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="true" />
-                        <Trigger Property="IsEnabled" Value="False" />
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" Value=".5" />
+                        </Trigger>
                         <Trigger Property="controls:ToggleButtonHelper.ContentDirection" Value="RightToLeft">
                             <Setter TargetName="LeftCol" Property="Width" Value="*" />
                             <Setter TargetName="PART_CHECKBOX" Property="Grid.Column" Value="1" />
