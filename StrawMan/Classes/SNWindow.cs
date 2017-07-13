@@ -1,12 +1,9 @@
-﻿using System.Reflection;
-using System.Windows;
+﻿using System.Windows;
 
 namespace Shannan.StrawMan
 {
-    public class SNWindow : Window
+    public class SNWindow : WindowBase
     {
-        private static readonly FieldInfo _menuDropAlignmentField;
-
         public SNWindow()
         {
             ShowInTaskbar = true;
@@ -16,24 +13,6 @@ namespace Shannan.StrawMan
             {
                 e.Handled = true;
             };
-        }
-
-        static SNWindow()
-        {
-            _menuDropAlignmentField = typeof(SystemParameters).GetField("_menuDropAlignment", BindingFlags.NonPublic | BindingFlags.Static);
-            EnsureStandardPopupAlignment();
-            //SystemParameters.StaticPropertyChanged += delegate
-            //{
-            //    EnsureStandardPopupAlignment();
-            //};
-        }
-
-        private static void EnsureStandardPopupAlignment()
-        {
-            if (SystemParameters.MenuDropAlignment && _menuDropAlignmentField != null)
-            {
-                _menuDropAlignmentField.SetValue(null, false);
-            }
         }
     }
 }

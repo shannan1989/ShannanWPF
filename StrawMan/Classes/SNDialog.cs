@@ -1,8 +1,6 @@
-﻿using System.Windows;
-
-namespace Shannan.StrawMan
+﻿namespace Shannan.StrawMan
 {
-    public class SNDialog : Window
+    public class SNDialog : WindowBase
     {
         public SNDialog()
         {
