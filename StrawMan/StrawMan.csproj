@@ -57,6 +57,10 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="WpfAnimatedGif, Version=1.4.14.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WpfAnimatedGif.1.4.14\lib\net\WpfAnimatedGif.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -66,6 +70,11 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\WindowBase.cs" />
+    <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Scenes\Tryout\DScrollViewer.xaml.cs">
+      <DependentUpon>DScrollViewer.xaml</DependentUpon>
     </Compile>
     <Compile Include="Scenes\Controls\DStyles.xaml.cs">
       <DependentUpon>DStyles.xaml</DependentUpon>
@@ -89,6 +98,12 @@
     <Compile Include="Scenes\System\DSystemInfo.xaml.cs">
       <DependentUpon>DSystemInfo.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ImageViewer.xaml.cs">
+      <DependentUpon>ImageViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Loading.xaml.cs">
+      <DependentUpon>Loading.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Pager.xaml.cs">
       <DependentUpon>Pager.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -97,6 +112,7 @@
       <DependentUpon>QuantitySelector.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Utils\CursorUtils.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\SNDialog.cs" />
@@ -133,6 +149,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Scenes\Tryout\DScrollViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Scenes\Controls\DStyles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -189,11 +209,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Styles\Controls.Slider.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Styles\Controls.TextBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Styles\Controls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\ImageViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Loading.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -215,6 +247,18 @@
     <Resource Include="UserControls\Images\decrement_enabled.png" />
     <Resource Include="UserControls\Images\increment_disabled.png" />
     <Resource Include="UserControls\Images\increment_enabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\Images\loading_background.png" />
+    <Resource Include="UserControls\Images\loading_background_large.png" />
+    <Resource Include="UserControls\Images\loading_ring.png" />
+    <Resource Include="UserControls\Images\loading_ring_large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UserControls\Images\image_fail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\eraser.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
