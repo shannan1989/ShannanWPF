@@ -1,5 +1,8 @@
-﻿using System.Windows;
+﻿using Shannan.StrawMan.Utils;
+using System;
+using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace Shannan.StrawMan
 {
@@ -54,6 +57,16 @@ namespace Shannan.StrawMan
                 default:
                     break;
             }
+        }
+
+        private void ChangeCursorButton_Click(object sender, RoutedEventArgs e)
+        {
+            Mouse.OverrideCursor = CursorUtils.Create(new Uri("pack://application:,,,/Images/eraser.ico"), 0, 8);
+        }
+
+        private void RestoreCursorButton_Click(object sender, RoutedEventArgs e)
+        {
+            Mouse.OverrideCursor = Cursors.Arrow;
         }
     }
 }
