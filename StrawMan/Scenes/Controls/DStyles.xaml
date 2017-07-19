@@ -19,32 +19,35 @@
                     <PasswordBox Width="150" controls:TextBoxHelper.Watermark="input your password" Password="123456" />
                 </WrapPanel>
                 <WrapPanel>
-                    <WrapPanel Margin="10">
-                        <CheckBox Content="男" IsChecked="True" />
-                        <CheckBox Content="女" />
-                        <CheckBox Content="双性" IsEnabled="False" />
+                    <WrapPanel Margin="20,10">
+                        <CheckBox Content="数学" />
+                        <CheckBox Content="英语" />
+                        <CheckBox Content="必修" IsChecked="True" IsEnabled="False" />
+                        <CheckBox Content="必不修" IsEnabled="False" />
                     </WrapPanel>
-                    <WrapPanel Margin="10">
-                        <CheckBox Content="男" IsChecked="True" controls:ToggleButtonHelper.ContentDirection="RightToLeft" />
-                        <CheckBox Content="女" controls:ToggleButtonHelper.ContentDirection="RightToLeft" />
-                        <CheckBox Content="双性" IsEnabled="False" controls:ToggleButtonHelper.ContentDirection="RightToLeft" />
+                    <WrapPanel Margin="20,10">
+                        <CheckBox Content="数学" IsChecked="True" IsEnabled="False" />
+                        <CheckBox Content="英语" IsEnabled="False" />
+                    </WrapPanel>
+                    <WrapPanel Margin="20,10">
+                        <CheckBox Content="数学" IsChecked="True" controls:ToggleButtonHelper.ContentDirection="RightToLeft" />
+                        <CheckBox Content="英语" controls:ToggleButtonHelper.ContentDirection="RightToLeft" />
                     </WrapPanel>
                 </WrapPanel>
                 <WrapPanel>
-                    <WrapPanel Margin="10">
-                        <RadioButton Content="男" IsChecked="True" />
-                        <RadioButton Content="女" />
-                        <RadioButton Content="变性" IsEnabled="False" />
+                    <WrapPanel Margin="20,10">
+                        <RadioButton Content="男" Margin="0,0,15,0" />
+                        <RadioButton Content="女" Margin="0,0,15,0" />
+                        <RadioButton Content="变性" IsChecked="True" Margin="0,0,15,0" />
                     </WrapPanel>
-                    <WrapPanel Margin="10">
-                        <RadioButton Content="男" />
-                        <RadioButton Content="女" />
-                        <RadioButton Content="变性" IsEnabled="False" IsChecked="True" />
+                    <WrapPanel Margin="20,10">
+                        <RadioButton Content="男" IsEnabled="False" IsChecked="True" Margin="0,0,15,0" />
+                        <RadioButton Content="女" IsEnabled="False" Margin="0,0,15,0" />
                     </WrapPanel>
-                    <WrapPanel Margin="10">
-                        <RadioButton Content="男" controls:ToggleButtonHelper.ContentDirection="RightToLeft" />
-                        <RadioButton Content="女" controls:ToggleButtonHelper.ContentDirection="RightToLeft" />
-                        <RadioButton Content="变性" IsEnabled="False" IsChecked="True" controls:ToggleButtonHelper.ContentDirection="RightToLeft" />
+                    <WrapPanel Margin="20,10">
+                        <RadioButton Content="男" IsChecked="True" controls:ToggleButtonHelper.ContentDirection="RightToLeft" Margin="0,0,15,0" />
+                        <RadioButton Content="女" controls:ToggleButtonHelper.ContentDirection="RightToLeft" Margin="0,0,15,0" />
+                        <RadioButton Content="变性" controls:ToggleButtonHelper.ContentDirection="RightToLeft" Margin="0,0,15,0" />
                     </WrapPanel>
                 </WrapPanel>
                 <WrapPanel Margin="10">
