@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoingWell", "DoingWell\DoingWell.csproj", "{55CF2B67-298C-4494-A085-8EB773763118}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shannan.WeChat", "Shannan.WeChat\Shannan.WeChat.csproj", "{E6EA6F76-C195-4E69-9697-1FE32EC68DE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrawMan", "StrawMan\StrawMan.csproj", "{76F6CC67-1DEA-4B6F-B21F-DA0F02B967CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{55CF2B67-298C-4494-A085-8EB773763118}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{55CF2B67-298C-4494-A085-8EB773763118}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{55CF2B67-298C-4494-A085-8EB773763118}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{55CF2B67-298C-4494-A085-8EB773763118}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6EA6F76-C195-4E69-9697-1FE32EC68DE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6EA6F76-C195-4E69-9697-1FE32EC68DE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6EA6F76-C195-4E69-9697-1FE32EC68DE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6EA6F76-C195-4E69-9697-1FE32EC68DE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76F6CC67-1DEA-4B6F-B21F-DA0F02B967CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76F6CC67-1DEA-4B6F-B21F-DA0F02B967CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76F6CC67-1DEA-4B6F-B21F-DA0F02B967CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76F6CC67-1DEA-4B6F-B21F-DA0F02B967CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
