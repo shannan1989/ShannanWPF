@@ -115,7 +115,7 @@ namespace Shannan.WeChat.Framework
                 return null;
 
             request.Method = Method == DataRequestMethod.POST ? "POST" : "GET";
-            request.Timeout = 60 * 1000;
+            request.Timeout = 6 * 1000;
             request.Headers.Add(HttpRequestHeader.AcceptEncoding, "gzip,deflate");
             request.Headers.Add("Pragma", "no-cache");
             request.Headers.Add("Cache-Control", "no-cache");
