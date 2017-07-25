@@ -19,6 +19,7 @@
             <Button Content="已安装软件" Margin="5,0" Padding="5" Tag="InstalledSoftware" Click="NavigationButton_Click" />
             <Button Content="多点触控基本操作" Margin="5,0" Padding="5" Tag="MultiTouch" Click="NavigationButton_Click" />
             <Button Content="多点触控高级操作" Margin="5,0" Padding="5" Tag="Manipulation" Click="NavigationButton_Click" />
+            <Button Content="动画基础" Margin="5,0" Padding="5" Tag="BasicAnimation" Click="NavigationButton_Click" />
             <Button Content="自定义样式" Margin="5,0" Padding="5" Tag="Styles" Click="NavigationButton_Click" />
             <Button Content="用户控件" Margin="5,0" Padding="5" Tag="UserControls" Click="NavigationButton_Click" />
         </WrapPanel>

@@ -42,6 +42,12 @@ namespace Shannan.StrawMan
                     dManipulation.ShowDialog();
                     break;
 
+                case "BasicAnimation":
+                    SNDialog dBasicAnimation = new DBasicAnimation();
+                    dBasicAnimation.Owner = GetWindow(this);
+                    dBasicAnimation.ShowDialog();
+                    break;
+
                 case "Styles":
                     SNDialog dStyles = new DStyles();
                     dStyles.Owner = GetWindow(this);
