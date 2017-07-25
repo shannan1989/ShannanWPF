@@ -73,6 +73,9 @@
     </Compile>
     <Compile Include="Classes\WindowBase.cs" />
     <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Scenes\Animation\DBasicAnimation.xaml.cs">
+      <DependentUpon>DBasicAnimation.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Scenes\Tryout\DScrollViewer.xaml.cs">
       <DependentUpon>DScrollViewer.xaml</DependentUpon>
     </Compile>
@@ -113,6 +116,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Utils\CursorUtils.cs" />
+    <Compile Include="Utils\EmojiUtils.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\SNDialog.cs" />
@@ -149,6 +153,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Scenes\Animation\DBasicAnimation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Scenes\Tryout\DScrollViewer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -259,6 +267,111 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\eraser.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Emojis.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Emojis\qqface0.png" />
+    <Resource Include="Images\Emojis\qqface1.png" />
+    <Resource Include="Images\Emojis\qqface10.png" />
+    <Resource Include="Images\Emojis\qqface11.png" />
+    <Resource Include="Images\Emojis\qqface12.png" />
+    <Resource Include="Images\Emojis\qqface13.png" />
+    <Resource Include="Images\Emojis\qqface14.png" />
+    <Resource Include="Images\Emojis\qqface15.png" />
+    <Resource Include="Images\Emojis\qqface16.png" />
+    <Resource Include="Images\Emojis\qqface17.png" />
+    <Resource Include="Images\Emojis\qqface18.png" />
+    <Resource Include="Images\Emojis\qqface19.png" />
+    <Resource Include="Images\Emojis\qqface2.png" />
+    <Resource Include="Images\Emojis\qqface20.png" />
+    <Resource Include="Images\Emojis\qqface21.png" />
+    <Resource Include="Images\Emojis\qqface22.png" />
+    <Resource Include="Images\Emojis\qqface23.png" />
+    <Resource Include="Images\Emojis\qqface24.png" />
+    <Resource Include="Images\Emojis\qqface25.png" />
+    <Resource Include="Images\Emojis\qqface26.png" />
+    <Resource Include="Images\Emojis\qqface27.png" />
+    <Resource Include="Images\Emojis\qqface28.png" />
+    <Resource Include="Images\Emojis\qqface29.png" />
+    <Resource Include="Images\Emojis\qqface3.png" />
+    <Resource Include="Images\Emojis\qqface30.png" />
+    <Resource Include="Images\Emojis\qqface31.png" />
+    <Resource Include="Images\Emojis\qqface32.png" />
+    <Resource Include="Images\Emojis\qqface33.png" />
+    <Resource Include="Images\Emojis\qqface34.png" />
+    <Resource Include="Images\Emojis\qqface35.png" />
+    <Resource Include="Images\Emojis\qqface36.png" />
+    <Resource Include="Images\Emojis\qqface37.png" />
+    <Resource Include="Images\Emojis\qqface38.png" />
+    <Resource Include="Images\Emojis\qqface39.png" />
+    <Resource Include="Images\Emojis\qqface4.png" />
+    <Resource Include="Images\Emojis\qqface40.png" />
+    <Resource Include="Images\Emojis\qqface41.png" />
+    <Resource Include="Images\Emojis\qqface42.png" />
+    <Resource Include="Images\Emojis\qqface43.png" />
+    <Resource Include="Images\Emojis\qqface44.png" />
+    <Resource Include="Images\Emojis\qqface45.png" />
+    <Resource Include="Images\Emojis\qqface46.png" />
+    <Resource Include="Images\Emojis\qqface47.png" />
+    <Resource Include="Images\Emojis\qqface48.png" />
+    <Resource Include="Images\Emojis\qqface49.png" />
+    <Resource Include="Images\Emojis\qqface5.png" />
+    <Resource Include="Images\Emojis\qqface50.png" />
+    <Resource Include="Images\Emojis\qqface51.png" />
+    <Resource Include="Images\Emojis\qqface52.png" />
+    <Resource Include="Images\Emojis\qqface53.png" />
+    <Resource Include="Images\Emojis\qqface54.png" />
+    <Resource Include="Images\Emojis\qqface55.png" />
+    <Resource Include="Images\Emojis\qqface56.png" />
+    <Resource Include="Images\Emojis\qqface57.png" />
+    <Resource Include="Images\Emojis\qqface58.png" />
+    <Resource Include="Images\Emojis\qqface59.png" />
+    <Resource Include="Images\Emojis\qqface6.png" />
+    <Resource Include="Images\Emojis\qqface60.png" />
+    <Resource Include="Images\Emojis\qqface61.png" />
+    <Resource Include="Images\Emojis\qqface62.png" />
+    <Resource Include="Images\Emojis\qqface63.png" />
+    <Resource Include="Images\Emojis\qqface64.png" />
+    <Resource Include="Images\Emojis\qqface65.png" />
+    <Resource Include="Images\Emojis\qqface66.png" />
+    <Resource Include="Images\Emojis\qqface67.png" />
+    <Resource Include="Images\Emojis\qqface68.png" />
+    <Resource Include="Images\Emojis\qqface69.png" />
+    <Resource Include="Images\Emojis\qqface7.png" />
+    <Resource Include="Images\Emojis\qqface70.png" />
+    <Resource Include="Images\Emojis\qqface71.png" />
+    <Resource Include="Images\Emojis\qqface72.png" />
+    <Resource Include="Images\Emojis\qqface73.png" />
+    <Resource Include="Images\Emojis\qqface74.png" />
+    <Resource Include="Images\Emojis\qqface75.png" />
+    <Resource Include="Images\Emojis\qqface76.png" />
+    <Resource Include="Images\Emojis\qqface77.png" />
+    <Resource Include="Images\Emojis\qqface78.png" />
+    <Resource Include="Images\Emojis\qqface79.png" />
+    <Resource Include="Images\Emojis\qqface8.png" />
+    <Resource Include="Images\Emojis\qqface80.png" />
+    <Resource Include="Images\Emojis\qqface81.png" />
+    <Resource Include="Images\Emojis\qqface82.png" />
+    <Resource Include="Images\Emojis\qqface83.png" />
+    <Resource Include="Images\Emojis\qqface84.png" />
+    <Resource Include="Images\Emojis\qqface85.png" />
+    <Resource Include="Images\Emojis\qqface86.png" />
+    <Resource Include="Images\Emojis\qqface87.png" />
+    <Resource Include="Images\Emojis\qqface88.png" />
+    <Resource Include="Images\Emojis\qqface89.png" />
+    <Resource Include="Images\Emojis\qqface9.png" />
+    <Resource Include="Images\Emojis\qqface90.png" />
+    <Resource Include="Images\Emojis\qqface91.png" />
+    <Resource Include="Images\Emojis\qqface92.png" />
+    <Resource Include="Images\Emojis\qqface93.png" />
+    <Resource Include="Images\Emojis\qqface94.png" />
+    <Resource Include="Images\Emojis\qqface95.png" />
+    <Resource Include="Images\Emojis\qqface96.png" />
+    <Resource Include="Images\Emojis\qqface97.png" />
+    <Resource Include="Images\Emojis\qqface98.png" />
+    <Resource Include="Images\Emojis\qqface99.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
