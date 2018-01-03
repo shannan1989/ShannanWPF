@@ -73,6 +73,7 @@
     </Compile>
     <Compile Include="Classes\WindowBase.cs" />
     <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Converters\ObjectConverter.cs" />
     <Compile Include="Scenes\Animation\DBasicAnimation.xaml.cs">
       <DependentUpon>DBasicAnimation.xaml</DependentUpon>
     </Compile>
@@ -269,7 +270,9 @@
     <Resource Include="Images\eraser.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Emojis.xml" />
+    <Resource Include="Resources\Emojis.xml">
+      <SubType>Designer</SubType>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Emojis\qqface0.png" />
