@@ -4,8 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:self="clr-namespace:Shannan.StrawMan"
+        xmlns:converters="clr-namespace:Shannan.StrawMan.Converters"
         mc:Ignorable="d"
         Title="Straw Man" d:DesignHeight="1080" d:DesignWidth="1920">
+    <Window.Resources>
+        <converters:ObjectConverter x:Key="objConverter" />
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />
@@ -30,6 +34,11 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
+
+            <StackPanel>
+                <CheckBox x:Name="chkVisible" Content="隐藏"/>
+                <TextBlock x:Name="tbVisible" Text="山南" Visibility="{Binding ElementName=chkVisible,Path=IsChecked,Mode=TwoWay,Converter={StaticResource objConverter},ConverterParameter=False:Visible:Collapsed}"/>
+            </StackPanel>
 
             <Border Grid.Column="1">
                 <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center">
